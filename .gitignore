@@ -1,4 +1,6 @@
-# Logs
+prototypes
+
+gs
 logs
 *.log
 npm-debug.log*

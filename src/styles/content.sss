@@ -1,0 +1,90 @@
+@import 'header.sss'
+@import 'board.sss'
+
+$section-padding-left: 40px
+$section-padding-right: 26px
+
+.content
+    flex-grow: 2
+    justify-content: flex-start
+    align-items: flex-start
+
+.content-section
+    width: 50%
+
+.content-section_main
+    width: calc(50% - ($section-padding-left + $section-padding-right))
+    padding: 0 $section-padding-right 0 $section-padding-left
+
+.content-container
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: flex-start
+    width: 100%
+
+.content-section__title
+    font-size: 18px
+    margin: 30px 0 20px
+
+.title__intro
+    font-size: 27px
+
+.title__state
+    font-size: 14px
+    font-weight: 500
+
+.content-section_favorite_devices
+    flex-grow: 1
+    padding: 0
+    .content-section__title
+        margin: 0
+        display: inline-block
+    
+.content-section-filter
+    display: flex
+    flex-wrap: wrap
+
+.content-options
+    padding: 0 $section-padding-left
+    margin: 20px 0
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+
+.filter__option
+    cursor: pointer
+    transition: 0.2s all linear
+    margin-left: 10px
+    border-radius: 20px
+    padding: 8px 15px
+    background: $color-lightGray
+    &:hover
+        box-shadow: 0 2px 6px 0 $color-shadow
+        background: $color-white
+
+.filter__option_active
+    background: $color-yellow
+    &:hover
+        background: $color-lightYellow
+
+.navigation_horizontal_scroll
+    overflow-y: hidden
+    overflow-x: scroll
+    z-index: 1000
+    &::-webkit-scrollbar
+        height: 0 // 5px
+        background: rgba(0, 0, 0, 0)
+    &::-webkit-scrollbar-thumb
+        border-radius: 20px
+        background: rgba(51, 51, 51, .2)
+    &::-webkit-scrollbar-button
+        height: $section-padding-left
+    .device-info:first-child
+        margin-left: $section-padding-left
+    .device-info
+        margin-bottom: 2px
+
+.navigation-list_horizontal_scroll
+    flex-wrap: nowrap
+    

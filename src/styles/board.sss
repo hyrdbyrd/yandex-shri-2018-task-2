@@ -1,0 +1,46 @@
+$board-padding: 20px
+
+.main-board
+    background: url('./../images/bg_main_1.png') no-repeat
+    background-size: 100% 100%
+    padding: 0 $board-padding
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+.board-part_left
+    width: 60%
+    padding: $board-padding 0
+
+.board-part_right
+    width: min-content
+    .device-info
+        margin-right: 0
+
+.board-intro-title
+    line-height: 30px
+
+.board-states
+    margin-top: 30px
+    display: flex
+    flex-wrap: wrap
+
+.board-state
+    margin-right: 20px
+
+.board-state__location
+    color: $color-text-gray
+    font-weight: 500
+    font-size: 14px
+
+.board-state__state
+    font-size: 36px
+
+.board-state___rain
+    &::after
+        content: ''
+        display: inline-block
+        background: url('./../images/cloud-drizzle.svg') no-repeat
+        $s: 26px
+        width: $s
+        height: $s
