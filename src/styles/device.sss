@@ -12,8 +12,7 @@ $device-height-grid-parsed: calc(100px - $device-padding * 2)
 .navigation-list_grid
     flex-direction: row
     flex-wrap: nowrap
-    overflow-x: scroll
-    overflow-y: hidden
+    overflow: hidden
     .device-info
         height: $device-height-grid-parsed
         &::before
@@ -34,7 +33,9 @@ $device-height-grid-parsed: calc(100px - $device-padding * 2)
     flex-direction: row
     flex-wrap: wrap
     align-items: flex-start
-    min-width: calc(($device-width + $device-margin) * 3)
+    min-width: 100%
+    &:last-child
+        margin-right: 0
 
 .arrows
     transition: all 0.2s linear

@@ -7,13 +7,14 @@
         arrows.addEventListener('click', function (event) {
             // this.parentElement.scrollBy(0, 270)
             let summ = 0;
-            const diff = 270 / 90;
+            const end = 270;
+            const diff = 10;
             const scrolling = setInterval(() => {
-                if (summ >= 270)
+                if (summ >= end)
                     clearInterval(scrolling)
                 this.parentElement.scrollBy(0, diff)
                 summ += diff;
-            }, 0)
+            }, 10)
         })
 
         rightBoard.insertAdjacentElement('afterBegin', arrows);

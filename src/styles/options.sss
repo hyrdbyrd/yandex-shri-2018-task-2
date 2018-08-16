@@ -1,0 +1,24 @@
+@import 'footer.sss'
+
+.slide-arrows
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    flex-grow: 1
+
+.slide-arrows__arrow
+    $s: 16px
+    width: $s
+    height: $s
+    background-size: 100% 100%
+    background-position: 0 0
+    opacity: .3
+
+.slide-arrows__arrow_active
+    opacity: .7
+
+.slide-arrows__arrow_left
+    margin-left: -15px
+
+.slide-arrows__arrow_right
+    margin-left: 15px

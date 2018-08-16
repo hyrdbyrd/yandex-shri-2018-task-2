@@ -16,6 +16,12 @@ $section-padding-right: 26px
     width: calc(50% - ($section-padding-left + $section-padding-right))
     padding: 0 $section-padding-right 0 $section-padding-left
 
+.content-section_favorite_scripts
+    .content-options
+        padding-left: 0
+        padding-top: 0
+        padding-bottom: 0
+
 .content-container
     flex-direction: row
     flex-wrap: wrap
@@ -24,6 +30,7 @@ $section-padding-right: 26px
     width: 100%
 
 .content-section__title
+    display: inline-block
     font-size: 18px
     margin: 30px 0 20px
 
@@ -37,9 +44,6 @@ $section-padding-right: 26px
 .content-section_favorite_devices
     flex-grow: 1
     padding: 0
-    .content-section__title
-        margin: 0
-        display: inline-block
     
 .content-section-filter
     display: flex
@@ -47,9 +51,7 @@ $section-padding-right: 26px
 
 .content-options
     padding: 0 $section-padding-left
-    margin: 20px 0
     display: flex
-    flex-wrap: wrap
     align-items: center
 
 .filter__option
