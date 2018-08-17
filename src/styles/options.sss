@@ -22,3 +22,92 @@
 
 .slide-arrows__arrow_right
     margin-left: 15px
+
+.shade
+    z-index: 1000
+    transition: $animate
+    width: 100vw
+    height: 100vh
+    position: fixed
+    top: 0
+    left: 0
+    background: $color-text-black
+    opacity: 0
+
+$popup-padding: 21px
+
+.wrappet
+    transition: $animate
+    position: fixed
+    z-index: 2000
+    display: flex
+    flex-direction: column
+    .popup
+        width: calc(100% - 28px)
+        height: 40vh
+        margin: 0
+        margin-bottom: 20px
+        &:first-child
+            margin-left: 0
+       
+.wrappet_active
+    width: 46%
+    top: 20vh
+    left: 26.8vw
+    margin: 0 auto
+
+.wrappet-options
+    width: 100%
+    display: flex
+    transition: $animate
+    justify-content: space-between
+
+.popup_closing
+    width: 46%
+    left: auto
+
+.popup_transition
+    transition: none
+
+.popup_active
+    width: 100%
+    height: 50%
+    padding: 21px
+
+.shade_hidden
+    display: none
+
+.shade_active
+    opacity: .5
+
+.options_close
+    font-size: 18px
+    height: calc(10vh - $popup-padding * 2)
+    transition: $animate
+    flex-grow: 1
+    opacity: 0
+    text-align: center
+    padding: $popup-padding
+    border-radius: $device-borderRadius
+    display: flex
+    align-items: center
+    justify-content: center
+
+.options_close_hidden
+    display: none
+
+.options_close_active
+    opacity: 1
+
+.options__close
+    margin-right: 30px
+    background: $color-white
+    &::before
+        display: block
+        content: 'Закрыть'
+
+.options__apply
+    background: $color-yellow
+    &::before
+        display: block
+        content: 'Применить'

@@ -1,6 +1,6 @@
 (function(){
     window.addEventListener('load', e => {
-        const optionsList = document.querySelectorAll('.content-section_arrows');
+        const optionsList = document.body.querySelectorAll('.content-section_arrows');
 
         optionsList.forEach(block => {
             const options = block.querySelector('.content-options');
@@ -41,13 +41,14 @@
                 const step = list.scrollWidth / blockWidth | 0; // Math.floor
 
                 const ac = 'slide-arrows__arrow_active'; // activeClass
+                
                 if (list.scrollLeft === 0) {
                     arrowLeft.classList.remove(ac);
                 } else if (!arrowLeft.classList.contains(ac)) {
                     arrowLeft.classList.add(ac);
                 }
 
-                if (list.scrollLeft * 2 > list.scrollWidth) {
+                if (list.offsetWidth + list.scrollLeft >= list.scrollWidth) {
                     arrowRight.classList.remove(ac);
                 } else if (!arrowRight.classList.contains(ac)) {
                     arrowRight.classList.add(ac);

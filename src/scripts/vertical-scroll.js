@@ -1,6 +1,6 @@
 (function(){
     window.addEventListener('load', e => {
-        const rightBoard = document.querySelector('.board-part_right');
+        const rightBoard = document.body.querySelector('.board-part_right');
         
         const arrows = document.createElement('div');
         arrows.classList.add('arrows');
@@ -20,7 +20,7 @@
         rightBoard.insertAdjacentElement('afterBegin', arrows);
 
         rightBoard.addEventListener('scroll', function (event) {
-            if (rightBoard.scrollTop * 2 > rightBoard.scrollHeight) {
+            if (rightBoard.offsetHeight + rightBoard.scrollTop >= rightBoard.scrollHeight) {
                 arrows.classList.add('arrows_hidden')
             } else if (arrows.classList.contains('arrows_hidden')) {
                 arrows.classList.remove('arrows_hidden')

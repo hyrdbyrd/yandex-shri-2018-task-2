@@ -99,7 +99,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "html,\r\nbody,\r\n.main {\r\n    height: 100vh;\r\n    max-height: 100vh;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n    color: #333333;\r\n    padding: 0;\r\n    margin: 0;\r\n    font-family: Arial, sans-serif;\r\n    font-weight: bold;\r\n    font-size: 16px;\r\n    overflow: hidden;\n}\r\n:focus {\r\n    outline: none;\n}\r\n.section {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n    -webkit-box-pack: center;\r\n        -ms-flex-pack: center;\r\n            justify-content: center;\n}\r\n.container {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -ms-flex-wrap: wrap;\r\n        flex-wrap: wrap;\r\n    -webkit-box-pack: start;\r\n        -ms-flex-pack: start;\r\n            justify-content: flex-start;\r\n    -webkit-box-align: center;\r\n        -ms-flex-align: center;\r\n            align-items: center;\r\n    width: 96%;\r\n    margin: 0 auto;\n}\r\n.navigation {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\n}\r\n.navigation-list {\r\n    padding-left: 0;\r\n    margin: 0;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -ms-flex-wrap: wrap;\r\n        flex-wrap: wrap;\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: row;\r\n            flex-direction: row;\r\n    -webkit-box-align: space-between;\r\n        -ms-flex-align: space-between;\r\n            align-items: space-between;\r\n    -webkit-box-pack: start;\r\n        -ms-flex-pack: start;\r\n            justify-content: flex-start;\n}\r\n.navigation-list__item {\r\n    list-style: none;\n}\r\n.link {\r\n    color: #858585;\r\n    text-decoration: none;\n}\r\n.link_active {\r\n    color: #333333;\n}\r\n.header::after {\r\n    content: '';\r\n    display: block;\r\n    bottom: 0;\r\n    width: 100%;\r\n    height: 1px;\r\n    background: #f7f7f7;\n}\r\n.header-container {\r\n    padding: 18px 0; /* ? */\n}\r\n.header-container__logo {\r\n    margin-right: 30px;\n}\r\n.header-menu__item {\r\n    margin-left: 30px;\n}\r\n.main-board {\r\n    background: url(" + escape(__webpack_require__(/*! ./../images/bg_main_1.png */ "./src/images/bg_main_1.png")) + ") no-repeat;\r\n    background-size: 100% 100%;\r\n    padding: 0 20px;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: row;\r\n            flex-direction: row;\r\n    -webkit-box-pack: justify;\r\n        -ms-flex-pack: justify;\r\n            justify-content: space-between;\n}\r\n.board-part_left {\r\n    width: 60%;\r\n    padding: 20px 0;\n}\r\n.board-part_right {\r\n    width: -webkit-min-content;\r\n    width: -moz-min-content;\r\n    width: min-content;\n}\r\n.board-part_right .device-info {\r\n        margin-right: 0;\n}\r\n.board-intro-title {\r\n    line-height: 30px;\n}\r\n.board-states {\r\n    margin-top: 30px;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -ms-flex-wrap: wrap;\r\n        flex-wrap: wrap;\n}\r\n.board-state {\r\n    margin-right: 20px;\n}\r\n.board-state__location {\r\n    color: #858585;\r\n    font-weight: 500;\r\n    font-size: 14px;\n}\r\n.board-state__state {\r\n    font-size: 36px;\n}\r\n.board-state___rain::after {\r\n    content: '';\r\n    display: inline-block;\r\n    background: url(" + escape(__webpack_require__(/*! ./../images/cloud-drizzle.svg */ "./src/images/cloud-drizzle.svg")) + ") no-repeat;\r\n    width: 26px;\r\n    height: 26px;\n}\r\n.content {\r\n    -webkit-box-flex: 2;\r\n        -ms-flex-positive: 2;\r\n            flex-grow: 2;\r\n    -webkit-box-pack: start;\r\n        -ms-flex-pack: start;\r\n            justify-content: flex-start;\r\n    -webkit-box-align: start;\r\n        -ms-flex-align: start;\r\n            align-items: flex-start;\n}\r\n.content-section {\r\n    width: 50%;\n}\r\n.content-section_main {\r\n    width: calc(50% - (40px + 26px));\r\n    padding: 0 26px 0 40px;\n}\r\n.content-section_favorite_scripts .content-options {\r\n        padding-left: 0;\r\n        padding-top: 0;\r\n        padding-bottom: 0;\n}\r\n.content-container {\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: row;\r\n            flex-direction: row;\r\n    -ms-flex-wrap: wrap;\r\n        flex-wrap: wrap;\r\n    -webkit-box-pack: justify;\r\n        -ms-flex-pack: justify;\r\n            justify-content: space-between;\r\n    -webkit-box-align: start;\r\n        -ms-flex-align: start;\r\n            align-items: flex-start;\r\n    width: 100%;\n}\r\n.content-section__title {\r\n    display: inline-block;\r\n    font-size: 18px;\r\n    margin: 30px 0 20px;\n}\r\n.title__intro {\r\n    font-size: 27px;\n}\r\n.title__state {\r\n    font-size: 14px;\r\n    font-weight: 500;\n}\r\n.content-section_favorite_devices {\r\n    -webkit-box-flex: 1;\r\n        -ms-flex-positive: 1;\r\n            flex-grow: 1;\r\n    padding: 0;\n}\r\n.content-section-filter {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -ms-flex-wrap: wrap;\r\n        flex-wrap: wrap;\n}\r\n.content-options {\r\n    padding: 0 40px;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n        -ms-flex-align: center;\r\n            align-items: center;\n}\r\n.filter__option {\r\n    cursor: pointer;\r\n    -webkit-transition: 0.2s all linear;\r\n    -o-transition: 0.2s all linear;\r\n    transition: 0.2s all linear;\r\n    margin-left: 10px;\r\n    border-radius: 20px;\r\n    padding: 8px 15px;\r\n    background: #f7f7f7;\n}\r\n.filter__option:hover {\r\n    -webkit-box-shadow: 0 2px 6px 0 rgba(197, 186, 186, .5);\r\n    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, .5);\r\n    background: #fff;\n}\r\n.filter__option_active {\r\n    background: #ffd93e;\n}\r\n.filter__option_active:hover {\r\n    background: #ffea51;\n}\r\n.navigation_horizontal_scroll {\r\n    overflow-y: hidden;\r\n    overflow-x: scroll;\r\n    z-index: 1000;\n}\r\n.navigation_horizontal_scroll::-webkit-scrollbar {\r\n    height: 0; /* 5px */\r\n    background: rgba(0, 0, 0, 0);\n}\r\n.navigation_horizontal_scroll::-webkit-scrollbar-thumb {\r\n    border-radius: 20px;\r\n    background: rgba(51, 51, 51, .2);\n}\r\n.navigation_horizontal_scroll::-webkit-scrollbar-button {\r\n    height: 40px;\n}\r\n.navigation_horizontal_scroll .device-info:first-child {\r\n        margin-left: 40px;\n}\r\n.navigation_horizontal_scroll .device-info {\r\n        margin-bottom: 2px;\n}\r\n.navigation-list_horizontal_scroll {\r\n    -ms-flex-wrap: nowrap;\r\n        flex-wrap: nowrap;\n}\r\n.navigation-list_grid {\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: row;\r\n            flex-direction: row;\r\n    -ms-flex-wrap: nowrap;\r\n        flex-wrap: nowrap;\r\n    overflow: hidden;\n}\r\n.navigation-list_grid .device-info {\r\n        height: calc(100px - 14px * 2);\n}\r\n.navigation-list_grid .device-info::before {\r\n    margin-bottom: 16px;\n}\r\n.navigation-list_grid::-webkit-scrollbar {\r\n    height: 0; /* 5px */\r\n    background: rgba(0, 0, 0, 0);\n}\r\n.navigation-list_grid::-webkit-scrollbar-thumb {\r\n    border-radius: 20px;\r\n    background: rgba(51, 51, 51, .2);\n}\r\n.navigation-list_grid::-webkit-scrollbar-button {\r\n    height: 2px;\n}\r\n.navigation-list-block {\r\n    margin-right: 33.333333333%;\r\n    height: calc((calc(100px - 14px * 2) + 14px * 2 + 15px) * 3 - 15px);\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: row;\r\n            flex-direction: row;\r\n    -ms-flex-wrap: wrap;\r\n        flex-wrap: wrap;\r\n    -webkit-box-align: start;\r\n        -ms-flex-align: start;\r\n            align-items: flex-start;\r\n    min-width: 100%;\n}\r\n.navigation-list-block:last-child {\r\n    margin-right: 0;\n}\r\n.arrows {\r\n    -webkit-transition: all 0.2s linear;\r\n    -o-transition: all 0.2s linear;\r\n    transition: all 0.2s linear;\r\n    height: calc(20px * 2);\r\n    width: 200px;\r\n    position: absolute;\r\n    background: #f7f7f7;\r\n    z-index: 100;\r\n    border-radius: 20px 20px 0 0;\r\n    margin-top: calc((120px + 15px) * 2 + 20px);\n}\r\n.arrows::before {\r\n    content: '';\r\n    display: block;\r\n    background: url(" + escape(__webpack_require__(/*! ./../images/arrow_top_double.svg */ "./src/images/arrow_top_double.svg")) + ") no-repeat 0 0;\r\n    background-size: 16px 16px;\r\n    width: 16px;\r\n    height: 16px;\r\n    margin: 15px auto;\n}\r\n.arrows_hidden {\r\n        opacity: 0;\n}\r\n.board-part_right {\r\n    height: calc(calc((120px + 15px) * 2 + 20px) + 120px / 3);\r\n    margin-right: -10px;\r\n    padding-right: 5px;\r\n    overflow-x: hidden;\r\n    overflow-y: scroll  ;\n}\r\n.board-part_right::-webkit-scrollbar {\r\n    width: 5px;\r\n    background: rgba(0, 0, 0, 0);\n}\r\n.board-part_right::-webkit-scrollbar-thumb {\r\n    border-radius: 20px;\r\n    background: rgba(51, 51, 51, .2);\n}\r\n.board-part_right::-webkit-scrollbar-button {\r\n    height: 20px;\n}\r\n.board-part_right .device-info:first-child {\r\n    margin-top: 20px;\n}\r\n.board-part_right .device-info:last-child {\r\n    margin-bottom: calc(15px * 3);\n}\r\n/* .device-add\r\n    content: '+'\r\n    display: flex\r\n    width: calc($device-width - 2 * $device-padding)\r\n    height: calc($device-height - 2 * $device-padding)\r\n    box-shadow: inset 0 0 10px 1px $color-shadow\r\n    color: $color-text-gray\r\n    font-size: 40px\r\n    padding: $device-padding\r\n    border-radius: $device-borderRadius\r\n    justify-content: center\r\n    align-items: center\r\n    background: $color-lightGray\r\n    transition: 0.2s all linear\r\n    cursor: pointer\r\n    &:hover\r\n        box-shadow: 0 2px 6px 0 $color-shadow\r\n        background: $color-white\r\n        color: $color-text-black */\r\n.device-info {\r\n    cursor: pointer;\r\n    width: calc(200px - 2 * 14px);\r\n    height: calc(120px - 2 * 14px);\r\n    background: #f7f7f7;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n    -webkit-box-pack: end;\r\n        -ms-flex-pack: end;\r\n            justify-content: flex-end;\r\n    padding: 14px;\r\n    border-radius: 20px;\r\n    margin: 0 15px 15px 0;\r\n    -webkit-transition: 0.1s all linear;\r\n    -o-transition: 0.1s all linear;\r\n    transition: 0.1s all linear;\n}\r\n.device-info::before {\r\n    content: '';\r\n    display: block;\r\n    position: relative;\r\n    background-position: 0 0;\r\n    background-size: 100% 100%;\r\n    background-repeat: no-repeat;\r\n    min-width: 24px;\r\n    min-height: 24px;\r\n    width: 24px;\r\n    height: 24px;\r\n    margin-bottom: 32px;\n}\r\n.device-info:hover {\r\n    background: #fff;\r\n    -webkit-box-shadow: 0 2px 6px 0 rgba(197, 186, 186, .5);\r\n    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, .5);\n}\r\n.device__task {\r\n    font-size: 12px;\r\n    color: #858585;\r\n    font-weight: 500;\n}\r\n.device-info_sun_dactive::before {\r\n    background-image: url(" + escape(__webpack_require__(/*! ./../images/i_sun_dactive.svg */ "./src/images/i_sun_dactive.svg")) + ");\n}\r\n.device-info_sun_active::before {\r\n    background-image: url(" + escape(__webpack_require__(/*! ./../images/i_sun_active.svg */ "./src/images/i_sun_active.svg")) + ");\n}\r\n.device-info_sun_w_max::before {\r\n    background-image: url(" + escape(__webpack_require__(/*! ./../images/i_sun_w_max.svg */ "./src/images/i_sun_w_max.svg")) + ");\n}\r\n.device-info_sun_w_min::before {\r\n    background-image: url(" + escape(__webpack_require__(/*! ./../images/i_sun_w_min.svg */ "./src/images/i_sun_w_min.svg")) + ");\n}\r\n.device-info_temperature_active::before {\r\n    background-image: url(" + escape(__webpack_require__(/*! ./../images/i_temperature_active.svg */ "./src/images/i_temperature_active.svg")) + ");\n}\r\n.device-info_temperature_dactive::before {\r\n    background-image: url(" + escape(__webpack_require__(/*! ./../images/i_temperature_dactive.svg */ "./src/images/i_temperature_dactive.svg")) + ");\n}\r\n.device-info_scheduled::before {\r\n    background-image: url(" + escape(__webpack_require__(/*! ./../images/i_scheduled.svg */ "./src/images/i_scheduled.svg")) + ");\n}\r\n.footer {\n    padding: 20px 0;\n    color: #858585;\n    font-size: 12px;\n}\r\n.navigation-list_footer .navigation-list__item {\n        margin-right: 10px;\n        display: inline-block;\n}\r\n.copyright {\n    display: inline-block;\n    text-align: right;\n    -webkit-box-flex: 2;\n        -ms-flex-positive: 2;\n            flex-grow: 2;\n}\r\n.slide-arrows {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n}\r\n.slide-arrows__arrow {\n    width: 16px;\n    height: 16px;\n    background-size: 100% 100%;\n    background-position: 0 0;\n    opacity: .3;\n}\r\n.slide-arrows__arrow_active {\n    opacity: .7;\n}\r\n.slide-arrows__arrow_left {\n    margin-left: -15px;\n}\r\n.slide-arrows__arrow_right {\n    margin-left: 15px;\n}", ""]);
+exports.push([module.i, "html,\r\nbody,\r\n.main {\r\n    height: 100vh;\r\n    max-height: 100vh;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n    color: #333333;\r\n    padding: 0;\r\n    margin: 0;\r\n    font-family: Arial, sans-serif;\r\n    font-weight: bold;\r\n    font-size: 16px;\r\n    overflow: hidden;\n}\r\n:focus {\r\n    outline: none;\n}\r\n.section {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n    -webkit-box-pack: center;\r\n        -ms-flex-pack: center;\r\n            justify-content: center;\n}\r\n.container {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -ms-flex-wrap: wrap;\r\n        flex-wrap: wrap;\r\n    -webkit-box-pack: start;\r\n        -ms-flex-pack: start;\r\n            justify-content: flex-start;\r\n    -webkit-box-align: center;\r\n        -ms-flex-align: center;\r\n            align-items: center;\r\n    width: 96%;\r\n    margin: 0 auto;\n}\r\n.navigation {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\n}\r\n.navigation-list {\r\n    padding-left: 0;\r\n    margin: 0;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -ms-flex-wrap: wrap;\r\n        flex-wrap: wrap;\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: row;\r\n            flex-direction: row;\r\n    -webkit-box-align: space-between;\r\n        -ms-flex-align: space-between;\r\n            align-items: space-between;\r\n    -webkit-box-pack: start;\r\n        -ms-flex-pack: start;\r\n            justify-content: flex-start;\n}\r\n.navigation-list__item {\r\n    list-style: none;\n}\r\n.link {\r\n    color: #858585;\r\n    text-decoration: none;\n}\r\n.link_active {\r\n    color: #333333;\n}\r\n.header::after {\r\n    content: '';\r\n    display: block;\r\n    bottom: 0;\r\n    width: 100%;\r\n    height: 1px;\r\n    background: #f7f7f7;\n}\r\n.header-container {\r\n    padding: 18px 0; /* ? */\n}\r\n.header-container__logo {\r\n    margin-right: 30px;\n}\r\n.header-menu__item {\r\n    margin-left: 30px;\n}\r\n.main-board {\r\n    background: url(" + escape(__webpack_require__(/*! ./../images/bg_main_1.png */ "./src/images/bg_main_1.png")) + ") no-repeat;\r\n    background-size: 100% 100%;\r\n    padding: 0 20px;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: row;\r\n            flex-direction: row;\r\n    -webkit-box-pack: justify;\r\n        -ms-flex-pack: justify;\r\n            justify-content: space-between;\n}\r\n.board-part_left {\r\n    width: 60%;\r\n    padding: 20px 0;\n}\r\n.board-part_right {\r\n    width: -webkit-min-content;\r\n    width: -moz-min-content;\r\n    width: min-content;\n}\r\n.board-part_right .device-info {\r\n        margin-right: 0;\n}\r\n.board-intro-title {\r\n    line-height: 30px;\n}\r\n.board-states {\r\n    margin-top: 30px;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -ms-flex-wrap: wrap;\r\n        flex-wrap: wrap;\n}\r\n.board-state {\r\n    margin-right: 20px;\n}\r\n.board-state__location {\r\n    color: #858585;\r\n    font-weight: 500;\r\n    font-size: 14px;\n}\r\n.board-state__state {\r\n    font-size: 36px;\n}\r\n.board-state___rain::after {\r\n    content: '';\r\n    display: inline-block;\r\n    background: url(" + escape(__webpack_require__(/*! ./../images/cloud-drizzle.svg */ "./src/images/cloud-drizzle.svg")) + ") no-repeat;\r\n    width: 26px;\r\n    height: 26px;\n}\r\n.content {\n    -webkit-box-flex: 2;\n        -ms-flex-positive: 2;\n            flex-grow: 2;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    -webkit-box-align: start;\n        -ms-flex-align: start;\n            align-items: flex-start;\n}\r\n.content-section {\n    width: 50%;\n}\r\n.content-section_main {\n    width: calc(50% - (40px + 26px));\n    padding: 0 26px 0 40px;\n}\r\n.content-section_favorite_scripts .content-options {\n        padding-left: 0;\n        padding-top: 0;\n        padding-bottom: 0;\n}\r\n.content-container {\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: start;\n        -ms-flex-align: start;\n            align-items: flex-start;\n    width: 100%;\n}\r\n.content-section__title {\n    display: inline-block;\n    font-size: 18px;\n    margin: 30px 0 20px;\n}\r\n.title__intro {\n    font-size: 27px;\n}\r\n.title__state {\n    font-size: 14px;\n    font-weight: 500;\n}\r\n.content-section_favorite_devices {\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    padding: 0;\n}\r\n.content-section-filter {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n}\r\n.content-options {\n    padding: 0 40px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\r\n.filter__option {\n    cursor: pointer;\n    -webkit-transition: 0.2s all linear;\n    -o-transition: 0.2s all linear;\n    transition: 0.2s all linear;\n    margin-left: 10px;\n    border-radius: 20px;\n    padding: 8px 15px;\n    background: #f7f7f7;\n}\r\n.filter__option:hover {\r\n    -webkit-box-shadow: 0 2px 6px 0 rgba(197, 186, 186, .5);\r\n    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, .5);\r\n    background: #fff;\n}\r\n.filter__option_active {\n    background: #ffd93e;\n}\r\n.filter__option_active:hover {\r\n    background: #ffea51;\n}\r\n.navigation_horizontal_scroll {\n    overflow-y: hidden;\n    overflow-x: scroll;\n    z-index: 100;\n}\r\n.navigation_horizontal_scroll::-webkit-scrollbar {\r\n    height: 0; /* 5px */\r\n    background: rgba(0, 0, 0, 0);\n}\r\n.navigation_horizontal_scroll::-webkit-scrollbar-thumb {\r\n    border-radius: 20px;\r\n    background: rgba(51, 51, 51, .2);\n}\r\n.navigation_horizontal_scroll::-webkit-scrollbar-button {\r\n    height: 40px;\n}\r\n.navigation_horizontal_scroll .device-info:first-child {\n        margin-left: 40px;\n}\r\n.navigation_horizontal_scroll .device-info {\n        margin-bottom: 2px;\n}\r\n.navigation-list_horizontal_scroll {\n    -ms-flex-wrap: nowrap;\n        flex-wrap: nowrap;\n}\r\n.navigation-list_grid {\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: row;\r\n            flex-direction: row;\r\n    -ms-flex-wrap: nowrap;\r\n        flex-wrap: nowrap;\r\n    overflow: hidden;\n}\r\n.navigation-list_grid .device-info {\r\n        height: calc(100px - 14px * 2);\n}\r\n.navigation-list_grid .device-info::before {\r\n    margin-bottom: 16px;\n}\r\n.navigation-list_grid::-webkit-scrollbar {\r\n    height: 0; /* 5px */\r\n    background: rgba(0, 0, 0, 0);\n}\r\n.navigation-list_grid::-webkit-scrollbar-thumb {\r\n    border-radius: 20px;\r\n    background: rgba(51, 51, 51, .2);\n}\r\n.navigation-list_grid::-webkit-scrollbar-button {\r\n    height: 2px;\n}\r\n.navigation-list-block {\r\n    margin-right: 33.333333333%;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: row;\r\n            flex-direction: row;\r\n    -ms-flex-wrap: wrap;\r\n        flex-wrap: wrap;\r\n    -webkit-box-align: start;\r\n        -ms-flex-align: start;\r\n            align-items: flex-start;\r\n    min-width: calc((200px + 15px) * 3);\r\n    height: calc((calc(100px - 14px * 2) + 14px * 2 + 15px) * 3 - 15px);\n}\r\n.navigation-list-block:last-child {\r\n    margin-right: 0;\n}\r\n.arrows {\r\n    -webkit-transition: 0.2s all linear;\r\n    -o-transition: 0.2s all linear;\r\n    transition: 0.2s all linear;\r\n    height: calc(20px * 2);\r\n    width: 200px;\r\n    position: absolute;\r\n    background: #f7f7f7;\r\n    z-index: 100;\r\n    border-radius: 20px 20px 0 0;\r\n    margin-top: calc((120px + 15px) * 2 + 20px);\n}\r\n.arrows::before {\r\n    content: '';\r\n    display: block;\r\n    background: url(" + escape(__webpack_require__(/*! ./../images/arrow_top_double.svg */ "./src/images/arrow_top_double.svg")) + ") no-repeat 0 0;\r\n    background-size: 16px 16px;\r\n    width: 16px;\r\n    height: 16px;\r\n    margin: 15px auto;\n}\r\n.arrows_hidden {\r\n        opacity: 0;\n}\r\n.board-part_right {\r\n    height: calc(calc((120px + 15px) * 2 + 20px) + 120px / 3);\r\n    margin-right: -10px;\r\n    padding-right: 5px;\r\n    overflow-x: hidden;\r\n    overflow-y: scroll  ;\n}\r\n.board-part_right::-webkit-scrollbar {\r\n    width: 5px;\r\n    background: rgba(0, 0, 0, 0);\n}\r\n.board-part_right::-webkit-scrollbar-thumb {\r\n    border-radius: 20px;\r\n    background: rgba(51, 51, 51, .2);\n}\r\n.board-part_right::-webkit-scrollbar-button {\r\n    height: 20px;\n}\r\n.board-part_right .device-info:first-child {\r\n    margin-top: 20px;\n}\r\n.board-part_right .device-info:last-child {\r\n    margin-bottom: calc(15px * 3);\n}\r\n/* .device-add\r\n    content: '+'\r\n    display: flex\r\n    width: calc($device-width - 2 * $device-padding)\r\n    height: calc($device-height - 2 * $device-padding)\r\n    box-shadow: inset 0 0 10px 1px $color-shadow\r\n    color: $color-text-gray\r\n    font-size: 40px\r\n    padding: $device-padding\r\n    border-radius: $device-borderRadius\r\n    justify-content: center\r\n    align-items: center\r\n    background: $color-lightGray\r\n    transition: $animate\r\n    cursor: pointer\r\n    &:hover\r\n        box-shadow: 0 2px 6px 0 $color-shadow\r\n        background: $color-white\r\n        color: $color-text-black */\r\n.device-info {\r\n    cursor: pointer;\r\n    width: calc(200px - 2 * 14px);\r\n    height: calc(120px - 2 * 14px);\r\n    background: #f7f7f7;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n    -webkit-box-pack: end;\r\n        -ms-flex-pack: end;\r\n            justify-content: flex-end;\r\n    padding: 14px;\r\n    border-radius: 20px;\r\n    margin: 0 15px 15px 0;\r\n    -webkit-transition: 0.2s all linear;\r\n    -o-transition: 0.2s all linear;\r\n    transition: 0.2s all linear;\n}\r\n.device-info::before {\r\n    content: '';\r\n    display: block;\r\n    position: relative;\r\n    background-position: 0 0;\r\n    background-size: 100% 100%;\r\n    background-repeat: no-repeat;\r\n    min-width: 24px;\r\n    min-height: 24px;\r\n    width: 24px;\r\n    height: 24px;\r\n    margin-bottom: 32px;\n}\r\n.device-info:hover {\r\n    background: #fff;\r\n    -webkit-box-shadow: 0 2px 6px 0 rgba(197, 186, 186, .5);\r\n    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, .5);\n}\r\n.device__task {\r\n    font-size: 12px;\r\n    color: #858585;\r\n    font-weight: 500;\n}\r\n.device-info_sun_dactive::before {\r\n    background-image: url(" + escape(__webpack_require__(/*! ./../images/i_sun_dactive.svg */ "./src/images/i_sun_dactive.svg")) + ");\n}\r\n.device-info_sun_active::before {\r\n    background-image: url(" + escape(__webpack_require__(/*! ./../images/i_sun_active.svg */ "./src/images/i_sun_active.svg")) + ");\n}\r\n.device-info_sun_w_max::before {\r\n    background-image: url(" + escape(__webpack_require__(/*! ./../images/i_sun_w_max.svg */ "./src/images/i_sun_w_max.svg")) + ");\n}\r\n.device-info_sun_w_min::before {\r\n    background-image: url(" + escape(__webpack_require__(/*! ./../images/i_sun_w_min.svg */ "./src/images/i_sun_w_min.svg")) + ");\n}\r\n.device-info_temperature_active::before {\r\n    background-image: url(" + escape(__webpack_require__(/*! ./../images/i_temperature_active.svg */ "./src/images/i_temperature_active.svg")) + ");\n}\r\n.device-info_temperature_dactive::before {\r\n    background-image: url(" + escape(__webpack_require__(/*! ./../images/i_temperature_dactive.svg */ "./src/images/i_temperature_dactive.svg")) + ");\n}\r\n.device-info_scheduled::before {\r\n    background-image: url(" + escape(__webpack_require__(/*! ./../images/i_scheduled.svg */ "./src/images/i_scheduled.svg")) + ");\n}\r\n.footer {\n    padding: 20px 0;\n    color: #858585;\n    font-size: 12px;\n}\r\n.navigation-list_footer .navigation-list__item {\n        margin-right: 10px;\n        display: inline-block;\n}\r\n.copyright {\n    display: inline-block;\n    text-align: right;\n    -webkit-box-flex: 2;\n        -ms-flex-positive: 2;\n            flex-grow: 2;\n}\r\n.slide-arrows {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n}\r\n.slide-arrows__arrow {\n    width: 16px;\n    height: 16px;\n    background-size: 100% 100%;\n    background-position: 0 0;\n    opacity: .3;\n}\r\n.slide-arrows__arrow_active {\n    opacity: .7;\n}\r\n.slide-arrows__arrow_left {\n    margin-left: -15px;\n}\r\n.slide-arrows__arrow_right {\n    margin-left: 15px;\n}\r\n.shade {\n    z-index: 1000;\n    -webkit-transition: 0.2s all linear;\n    -o-transition: 0.2s all linear;\n    transition: 0.2s all linear;\n    width: 100vw;\n    height: 100vh;\n    position: fixed;\n    top: 0;\n    left: 0;\n    background: #333333;\n    opacity: 0;\n}\r\n.wrappet {\n    -webkit-transition: 0.2s all linear;\n    -o-transition: 0.2s all linear;\n    transition: 0.2s all linear;\n    position: fixed;\n    z-index: 2000;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n}\r\n.wrappet .popup {\n        width: calc(100% - 28px);\n        height: 40vh;\n        margin: 0;\n        margin-bottom: 20px;\n}\r\n.wrappet .popup:first-child {\r\n    margin-left: 0;\n}\r\n.wrappet_active {\n    width: 46%;\n    top: 20vh;\n    left: 26.8vw;\n    margin: 0 auto;\n}\r\n.wrappet-options {\n    width: 100%;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-transition: 0.2s all linear;\n    -o-transition: 0.2s all linear;\n    transition: 0.2s all linear;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n}\r\n.popup_closing {\n    width: 46%;\n    left: auto;\n}\r\n.popup_transition {\n    -webkit-transition: none;\n    -o-transition: none;\n    transition: none;\n}\r\n.popup_active {\n    width: 100%;\n    height: 50%;\n    padding: 21px;\n}\r\n.shade_hidden {\n    display: none;\n}\r\n.shade_active {\n    opacity: .5;\n}\r\n.options_close {\n    font-size: 18px;\n    height: calc(10vh - 21px * 2);\n    -webkit-transition: 0.2s all linear;\n    -o-transition: 0.2s all linear;\n    transition: 0.2s all linear;\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    opacity: 0;\n    text-align: center;\n    padding: 21px;\n    border-radius: 20px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\r\n.options_close_hidden {\n    display: none;\n}\r\n.options_close_active {\n    opacity: 1;\n}\r\n.options__close {\n    margin-right: 30px;\n    background: #fff;\n}\r\n.options__close::before {\r\n    display: block;\r\n    content: '\\417\\430\\43A\\440\\44B\\442\\44C';\n}\r\n.options__apply {\n    background: #ffd93e;\n}\r\n.options__apply::before {\r\n    display: block;\r\n    content: '\\41F\\440\\438\\43C\\435\\43D\\438\\442\\44C';\n}", ""]);
 
 // exports
 
@@ -881,6 +881,146 @@ __webpack_require__(/*! ./images/arrow_left.svg */ "./src/images/arrow_left.svg"
 
 __webpack_require__(/*! ./images/arrow_right.svg */ "./src/images/arrow_right.svg");
 
+__webpack_require__(/*! ./scripts/popup.js */ "./src/scripts/popup.js");
+
+/***/ }),
+
+/***/ "./src/scripts/popup.js":
+/*!******************************!*\
+  !*** ./src/scripts/popup.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+(function () {
+    window.addEventListener('load', function (e) {
+        var _ = document;
+        var div = _.createElement('div');
+        var body = document.body;
+
+        var popupsElems = body.querySelectorAll('.device-info');
+        var shade = body.querySelector('.shade');
+        var state = true;
+
+        function handler(event) {
+            var element = this;
+
+            var wrappet = div.cloneNode(false);
+            var wrappetOptions = div.cloneNode(false);
+
+            var closeOpt = div.cloneNode(false);
+            closeOpt.classList.add('options_close');
+            closeOpt.classList.add('options_close_hidden');
+
+            var close = closeOpt.cloneNode(true);
+            var apply = closeOpt.cloneNode(true);
+
+            if (state) {
+                wrappet.classList.add('wrappet');
+                wrappetOptions.classList.add('wrappet-options');
+
+                close.classList.add('options__close');
+                close.addEventListener('click', function (e) {
+                    toggle();
+                    removeWrappet();
+                });
+
+                apply.classList.add('options__apply');
+                apply.addEventListener('click', function (e) {
+                    toggle();
+                    removeWrappet();
+                });
+
+                var paste = element.previousElementSibling;
+                var flag = 'afterEnd';
+
+                if (!paste) {
+                    flag = 'beforeBegin';
+                    paste = element.nextElementSibling;
+                }
+
+                wrappetOptions.appendChild(close);
+                wrappetOptions.appendChild(apply);
+
+                wrappet.appendChild(element);
+                wrappet.appendChild(wrappetOptions);
+
+                paste.insertAdjacentElement(flag, wrappet);
+            }
+
+            toggle();
+
+            function removeWrappet() {
+                setTimeout(function () {
+                    wrappet.removeChild(wrappetOptions);
+                    var paste = wrappet.previousElementSibling;
+                    var flag = 'afterEnd';
+                    if (!paste) {
+                        flag = 'beforeBegin';
+                        paste = wrappet.nextElementSibling;
+                    }
+
+                    paste.insertAdjacentElement(flag, element);
+
+                    var parent = wrappet.parentElement;
+                    parent.removeChild(wrappet);
+                }, 200);
+            }
+
+            function toggle() {
+                element.classList.toggle('popup_active');
+                if (state) {
+                    element.removeEventListener('click', handler);
+                } else {
+                    element.addEventListener('click', handler);
+                }
+
+                fullRebase();
+                state = !state;
+            }
+
+            function rebase(element, start, end) {
+                var ms = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
+                var hasStart = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : true;
+                var hasEnd = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : true;
+
+                var s = [start, end];
+                if (!state) {
+                    ;
+
+                    var _ref = [s[1], s[0]];
+                    s[0] = _ref[0];
+                    s[1] = _ref[1];
+                }if (hasStart) {
+                    element.classList.toggle(s[0]);
+                }
+                if (hasEnd) {
+                    setTimeout(function () {
+                        element.classList.toggle(s[1]);
+                    }, ms);
+                }
+            }
+
+            function fullRebase() {
+                rebase(shade, 'shade_hidden', 'shade_active', state ? 0 : 200);
+                rebase(close, 'options_close_hidden', 'options_close_active', 200);
+                rebase(apply, 'options_close_hidden', 'options_close_active', 200);
+                rebase(element, 'popup_active', 'popup');
+                if (state) {
+                    rebase(wrappet, 'wrappet', 'wrappet_active', 0, false);
+                }
+            }
+        }
+
+        popupsElems.forEach(function (popup, i, link) {
+            popup.addEventListener('click', handler);
+        });
+    });
+})();
+
 /***/ }),
 
 /***/ "./src/scripts/scroll-slide.js":
@@ -895,7 +1035,7 @@ __webpack_require__(/*! ./images/arrow_right.svg */ "./src/images/arrow_right.sv
 
 (function () {
     window.addEventListener('load', function (e) {
-        var optionsList = document.querySelectorAll('.content-section_arrows');
+        var optionsList = document.body.querySelectorAll('.content-section_arrows');
 
         optionsList.forEach(function (block) {
             var options = block.querySelector('.content-options');
@@ -934,13 +1074,14 @@ __webpack_require__(/*! ./images/arrow_right.svg */ "./src/images/arrow_right.sv
                 var step = list.scrollWidth / blockWidth | 0; // Math.floor
 
                 var ac = 'slide-arrows__arrow_active'; // activeClass
+
                 if (list.scrollLeft === 0) {
                     arrowLeft.classList.remove(ac);
                 } else if (!arrowLeft.classList.contains(ac)) {
                     arrowLeft.classList.add(ac);
                 }
 
-                if (list.scrollLeft * 2 > list.scrollWidth) {
+                if (list.offsetWidth + list.scrollLeft >= list.scrollWidth) {
                     arrowRight.classList.remove(ac);
                 } else if (!arrowRight.classList.contains(ac)) {
                     arrowRight.classList.add(ac);
@@ -967,7 +1108,7 @@ __webpack_require__(/*! ./images/arrow_right.svg */ "./src/images/arrow_right.sv
 
 (function () {
     window.addEventListener('load', function (e) {
-        var rightBoard = document.querySelector('.board-part_right');
+        var rightBoard = document.body.querySelector('.board-part_right');
 
         var arrows = document.createElement('div');
         arrows.classList.add('arrows');
@@ -988,7 +1129,7 @@ __webpack_require__(/*! ./images/arrow_right.svg */ "./src/images/arrow_right.sv
         rightBoard.insertAdjacentElement('afterBegin', arrows);
 
         rightBoard.addEventListener('scroll', function (event) {
-            if (rightBoard.scrollTop * 2 > rightBoard.scrollHeight) {
+            if (rightBoard.offsetHeight + rightBoard.scrollTop >= rightBoard.scrollHeight) {
                 arrows.classList.add('arrows_hidden');
             } else if (arrows.classList.contains('arrows_hidden')) {
                 arrows.classList.remove('arrows_hidden');

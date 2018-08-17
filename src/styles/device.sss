@@ -28,17 +28,17 @@ $device-height-grid-parsed: calc(100px - $device-padding * 2)
 
 .navigation-list-block
     margin-right: 33.333333333%
-    height: calc(($device-height-grid-parsed + $device-padding * 2 + $device-margin) * 3 - $device-margin)
     display: flex
     flex-direction: row
     flex-wrap: wrap
     align-items: flex-start
-    min-width: 100%
+    min-width: calc(($device-width + $device-margin) * 3)
+    height: calc(($device-height-grid-parsed + $device-padding * 2 + $device-margin) * 3 - $device-margin)
     &:last-child
         margin-right: 0
 
 .arrows
-    transition: all 0.2s linear
+    transition: $animate
     height: calc($device-borderRadius * 2)
     width: $device-width
     position: absolute
@@ -91,7 +91,7 @@ $device-height-grid-parsed: calc(100px - $device-padding * 2)
     justify-content: center
     align-items: center
     background: $color-lightGray
-    transition: 0.2s all linear
+    transition: $animate
     cursor: pointer
     &:hover
         box-shadow: 0 2px 6px 0 $color-shadow
@@ -110,7 +110,7 @@ $device-height-grid-parsed: calc(100px - $device-padding * 2)
     padding: $device-padding
     border-radius: $device-borderRadius
     margin: 0 $device-margin $device-margin 0
-    transition: 0.1s all linear
+    transition: $animate
     &::before
         content: ''
         display: block
