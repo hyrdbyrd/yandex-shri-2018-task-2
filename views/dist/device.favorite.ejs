@@ -1,0 +1,23 @@
+<% if (favorites.length) { %>
+    <nav class="navigation navigation_favorite">
+        <ul class="navigation-list navigation-list_favorites">
+            <% favorites.forEach(function (e) { %>
+                <li class="navigation-list__item device-info device-info_favorites popups" data-value="<%= e.filter %>">
+                    <div class="device-info-intro">
+                        <% if (e.type) { %>
+                            <img class="device-info-intro__type" src="./images/i_<%= e.type %>_<%= e.isActive ? 'a' : 'da' %>ctive.svg">
+                        <% } %>
+                        <div class="device-info-intro-data">
+                            <div class="device-info-intro__name">
+                                <%= e.name %>
+                            </div>
+                            <div class="device-info-intro__state">
+                                <%= e.state %>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            <% }) %>
+        </ul>
+    </nav>
+<% } %>

@@ -15,6 +15,19 @@ body,
     font-size: 16px
     overflow: hidden
 
+.halved-content
+    width: 100%
+    display: flex
+    flex-wrap: nowrap
+    flex-direction: row
+    justify-content: space-between
+
+.hidden
+    display: none
+
+.no-visible
+    opacity: 0
+
 :focus
     outline: none
 
@@ -30,21 +43,6 @@ body,
     align-items: center
     width: $container-size
     margin: 0 auto
-
-.navigation
-    display: flex
-
-.navigation-list
-    padding-left: 0
-    margin: 0
-    display: flex
-    flex-wrap: wrap
-    flex-direction: row
-    align-items: space-between
-    justify-content: flex-start
-
-.navigation-list__item
-    list-style: none
 
 .link
     color: $color-text-gray

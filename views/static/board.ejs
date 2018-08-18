@@ -1,0 +1,33 @@
+<div class="main-board">
+    <div class="board-part board-part_left board-part_state">
+        <div class="board-intro-title">
+            <div class="title__intro">
+                Привет, Игнат!
+            </div>
+            <div class="title__state">
+                Двери и ока закрыты, сигнализация включена
+            </div>
+        </div>
+        <div class="board-states">
+            <div class="board-state">
+                <div class="board-state__location">
+                    Дома
+                </div>
+                <div class="board-state__home board-state__state board-state___normal">
+                    +23
+                </div>
+            </div>
+            <div class="board-state">
+                <div class="board-state__location">
+                    За окном
+                </div>
+                <div class="board-state__home board-state__state board-state___rain">
+                    +19
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="board-part board-part_right board-part_devices_state">
+        <%- include('../dist/device.state.ejs') %>
+    </div>
+</div>

@@ -1,11 +1,17 @@
 (function(){
     window.addEventListener('load', e => {
         const rightBoard = document.body.querySelector('.board-part_right');
-        
-        const arrows = document.createElement('div');
-        arrows.classList.add('arrows');
+
+        function check (event) {
+            if (rightBoard.offsetHeight + rightBoard.scrollTop >= rightBoard.scrollHeight) {
+                arrows.classList.add('no-visible')
+            } else if (arrows.classList.contains('no-visible')) {
+                arrows.classList.remove('no-visible')
+            }
+        }
+
+        const arrows = document.body.querySelector('.arrows');
         arrows.addEventListener('click', function (event) {
-            // this.parentElement.scrollBy(0, 270)
             let summ = 0;
             const end = 270;
             const diff = 10;
@@ -17,14 +23,6 @@
             }, 10)
         })
 
-        rightBoard.insertAdjacentElement('afterBegin', arrows);
-
-        rightBoard.addEventListener('scroll', function (event) {
-            if (rightBoard.offsetHeight + rightBoard.scrollTop >= rightBoard.scrollHeight) {
-                arrows.classList.add('arrows_hidden')
-            } else if (arrows.classList.contains('arrows_hidden')) {
-                arrows.classList.remove('arrows_hidden')
-            }
-        })
+        rightBoard.addEventListener('scroll', check)
     })
 })()

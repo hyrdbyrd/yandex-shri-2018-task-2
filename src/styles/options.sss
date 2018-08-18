@@ -1,4 +1,4 @@
-@import 'footer.sss'
+@import 'index.sss'
 
 .slide-arrows
     display: flex
@@ -34,8 +34,6 @@
     background: $color-text-black
     opacity: 0
 
-$popup-padding: 21px
-
 .wrappet
     transition: $animate
     position: fixed
@@ -43,13 +41,37 @@ $popup-padding: 21px
     display: flex
     flex-direction: column
     .popup
-        width: calc(100% - 28px)
-        height: 40vh
+        width: 100%
         margin: 0
         margin-bottom: 20px
+        justify-content: flex-start
+        &:hover
+            background: $color-lightGray
+            box-shadow: none
+        .device-intro
+            flex-direction: row-reverse
+            justify-content: space-between
+            .device__name
+                font-size: 27px
+                margin-bottom: 6px
+            .device__task
+                font-size: 14px
+            &::before
+                $s: 46px
+                width: $s
+                height: $s
+                background-size: 100% 100%
+                margin: 0
         &:first-child
             margin-left: 0
-       
+
+.temperature-info
+    font-size: 36px
+    flex-grow: 1
+    display: flex
+    justify-content: flex-end
+    align-items: center
+
 .wrappet_active
     width: 46%
     top: 20vh
@@ -62,15 +84,7 @@ $popup-padding: 21px
     transition: $animate
     justify-content: space-between
 
-.popup_closing
-    width: 46%
-    left: auto
-
-.popup_transition
-    transition: none
-
 .popup_active
-    width: 100%
     height: 50%
     padding: 21px
 
@@ -81,17 +95,20 @@ $popup-padding: 21px
     opacity: .5
 
 .options_close
+    cursor: pointer
     font-size: 18px
     height: calc(10vh - $popup-padding * 2)
     transition: $animate
     flex-grow: 1
     opacity: 0
     text-align: center
-    padding: $popup-padding
+    padding: 0 $popup-padding
     border-radius: $device-borderRadius
     display: flex
     align-items: center
     justify-content: center
+    &:hover
+        box-shadow: 0 2px 6px 0 $color-shadow
 
 .options_close_hidden
     display: none
@@ -105,9 +122,13 @@ $popup-padding: 21px
     &::before
         display: block
         content: 'Закрыть'
+    &:hover 
+        background: $color-white
 
 .options__apply
     background: $color-yellow
     &::before
         display: block
         content: 'Применить'
+    &:hover 
+        background: $color-lightYellow

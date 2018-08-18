@@ -1,4 +1,6 @@
-$board-padding: 20px
+@import 'index.sss'
+
+// OK!
 
 .main-board
     background: url('./../images/bg_main_1.png') no-repeat
@@ -14,8 +16,19 @@ $board-padding: 20px
 
 .board-part_right
     width: min-content
-    .device-info
-        margin-right: 0
+    height: calc($part-height + $device-height / 3)
+    margin-right: -20px
+    /* padding-right: 10px */
+    overflow-x: hidden
+    overflow-y: scroll
+    &::-webkit-scrollbar
+        width: 5px
+        background: rgba(0, 0, 0, 0)
+    &::-webkit-scrollbar-thumb
+        border-radius: $device-borderRadius
+        background: rgba(51, 51, 51, .2)
+    &::-webkit-scrollbar-button
+        height: $device-borderRadius
 
 .board-intro-title
     line-height: 30px

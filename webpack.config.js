@@ -1,16 +1,22 @@
 const path = require('path');
 const devMode = process.env.NODE_ENV !== 'production';
-const DIST_PATH = path.join(__dirname, 'dist').replace(/\\/g, '/');
+const DIST_PATH = path.join(__dirname, 'public').replace(/\\/g, '/');
+const { backend } = require('./server/server.js');
 
 module.exports = {
   mode: devMode ? 'development' : 'production',
   devtool: devMode ? 'source-map' : null,
   watch: devMode,
-  entry: path.join(__dirname, 'src', 'index.js'),
+  entry: ['babel-polyfill', path.join(__dirname, 'src', 'index.js')],
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
-    publicPath: DIST_PATH
+  },
+  devServer: {
+    contentBase: DIST_PATH,
+    compress: true,
+    port: 9000,
+    before: backend
   },
   module: {
     rules: [
@@ -38,7 +44,7 @@ module.exports = {
               plugins: loader => [
                 require('postcss-import')({ root: loader.resourcePath }),
                 require('autoprefixer')({
-                  browsers: ['ie >= 8', 'last 4 version']
+                  browsers: ['ie >= 9', 'last 4 version']
                 }),
                 require('precss')()
               ]

@@ -1,48 +1,11 @@
-@import 'content.sss'
-
-$device-padding: 14px
-$device-width: 200px
-$device-height: 120px
-$device-borderRadius: 20px
-$device-margin: 15px
-$device-bgColor: $color-lightGray
-$part-height: calc(($device-height + $device-margin) * 2 + $board-padding)
-$device-height-grid-parsed: calc(100px - $device-padding * 2)
-
-.navigation-list_grid
-    flex-direction: row
-    flex-wrap: nowrap
-    overflow: hidden
-    .device-info
-        height: $device-height-grid-parsed
-        &::before
-            margin-bottom: 16px
-    &::-webkit-scrollbar
-        height: 0 // 5px
-        background: rgba(0, 0, 0, 0)
-    &::-webkit-scrollbar-thumb
-        border-radius: 20px
-        background: rgba(51, 51, 51, .2)
-    &::-webkit-scrollbar-button
-        height: 2px
-
-.navigation-list-block
-    margin-right: 33.333333333%
-    display: flex
-    flex-direction: row
-    flex-wrap: wrap
-    align-items: flex-start
-    min-width: calc(($device-width + $device-margin) * 3)
-    height: calc(($device-height-grid-parsed + $device-padding * 2 + $device-margin) * 3 - $device-margin)
-    &:last-child
-        margin-right: 0
+@import 'index.sss'
 
 .arrows
     transition: $animate
     height: calc($device-borderRadius * 2)
     width: $device-width
     position: absolute
-    background: $device-bgColor
+    background: $color-lightGray
     z-index: 100
     border-radius: $device-borderRadius $device-borderRadius 0 0
     margin-top: $part-height
@@ -55,108 +18,58 @@ $device-height-grid-parsed: calc(100px - $device-padding * 2)
         width: $s
         height: $s
         margin: 15px auto
-    &_hidden
-        opacity: 0
-
-.board-part_right
-    height: calc($part-height + $device-height / 3)
-    margin-right: -10px
-    padding-right: 5px
-    overflow-x: hidden
-    overflow-y: scroll  
-    &::-webkit-scrollbar
-        width: 5px
-        background: rgba(0, 0, 0, 0)
-    &::-webkit-scrollbar-thumb
-        border-radius: $device-borderRadius
-        background: rgba(51, 51, 51, .2)
-    &::-webkit-scrollbar-button
-        height: $device-borderRadius
-    .device-info
-        &:first-child
-            margin-top: $board-padding
-        &:last-child
-            margin-bottom: calc($device-margin * 3)
-
-/* .device-add
-    content: '+'
-    display: flex
-    width: calc($device-width - 2 * $device-padding)
-    height: calc($device-height - 2 * $device-padding)
-    box-shadow: inset 0 0 10px 1px $color-shadow
-    color: $color-text-gray
-    font-size: 40px
-    padding: $device-padding
-    border-radius: $device-borderRadius
-    justify-content: center
-    align-items: center
-    background: $color-lightGray
-    transition: $animate
-    cursor: pointer
     &:hover
-        box-shadow: 0 2px 6px 0 $color-shadow
         background: $color-white
-        color: $color-text-black */
-
 
 .device-info
+    box-sizing: border-box
     cursor: pointer
-    width: calc($device-width - 2 * $device-padding)
-    height: calc($device-height - 2 * $device-padding)
-    background: $device-bgColor
-    display: flex
-    flex-direction: column
-    justify-content: flex-end
+    width: $device-width
+    min-width: $device-width
+    height: $device-height
+    background: $color-lightGray
     padding: $device-padding
     border-radius: $device-borderRadius
     margin: 0 $device-margin $device-margin 0
     transition: $animate
-    &::before
-        content: ''
-        display: block
-        $s: 24px
-        position: relative
-        background-position: 0 0
-        background-size: 100% 100%
-        background-repeat: no-repeat
-        min-width: $s
-        min-height: $s
-        width: $s
-        height: $s
-        margin-bottom: 32px
     &:hover
         background: $color-white
         box-shadow: 0 2px 6px 0 $color-shadow
 
-.device__task
+.device-info_state
+    &:first-child
+        margin-top: $board-padding
+    &:last-child
+        margin-bottom: calc($device-margin * 3)
+
+.device-info_script
+    height: 100px
+
+.device-info-intro
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+
+.device-intro::before
+    content: ''
+    display: block
+    $s: 24px
+    position: relative
+    background-position: 0 0
+    background-size: 100% 100%
+    background-repeat: no-repeat
+    min-width: $s
+    min-height: $s
+    width: $s
+    height: $s
+    margin-bottom: 32px
+
+.device-info-intro__name
+    font-size: 14px
+
+.device-info-intro__state
     font-size: 12px
     color: $color-text-gray
     font-weight: 500
-
-.device-info_sun_dactive
-    &::before
-        background-image: url('./../images/i_sun_dactive.svg')
-
-.device-info_sun_active
-    &::before
-        background-image: url('./../images/i_sun_active.svg')
-
-.device-info_sun_w_max
-    &::before
-        background-image: url('./../images/i_sun_w_max.svg')
-
-.device-info_sun_w_min
-    &::before
-        background-image: url('./../images/i_sun_w_min.svg')
-
-.device-info_temperature_active
-    &::before
-        background-image: url('./../images/i_temperature_active.svg')
-
-.device-info_temperature_dactive
-    &::before
-        background-image: url('./../images/i_temperature_dactive.svg')
-
-.device-info_scheduled
-    &::before
-        background-image: url('./../images/i_scheduled.svg')

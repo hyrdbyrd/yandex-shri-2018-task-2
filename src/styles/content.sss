@@ -1,20 +1,19 @@
-@import 'header.sss'
-@import 'board.sss'
-
-$section-padding-left: 40px
-$section-padding-right: 26px
+@import 'index.sss'
 
 .content
     flex-grow: 2
     justify-content: flex-start
     align-items: flex-start
+    box-sizing: border-box
 
 .content-section
+    height: 100%
     width: 50%
+    flex-grow: 1
+    box-sizing: border-box
 
 .content-section_main
-    width: calc(50% - ($section-padding-left + $section-padding-right))
-    padding: 0 $section-padding-right 0 $section-padding-left
+    margin-right: 30px
 
 .content-section_favorite_scripts
     .content-options
@@ -27,7 +26,6 @@ $section-padding-right: 26px
     flex-wrap: wrap
     justify-content: space-between
     align-items: flex-start
-    width: 100%
 
 .content-section__title
     display: inline-block
@@ -50,7 +48,6 @@ $section-padding-right: 26px
     flex-wrap: wrap
 
 .content-options
-    padding: 0 $section-padding-left
     display: flex
     align-items: center
 

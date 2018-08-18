@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Яндекс Дом</title>
+</head>
+<body>
+    <div class="shade shade_hidden"></div>
+    <div class="main">
+        <%- include('static/header') %>
+        <section class="content section">
+            <div class="container content-container">
+                <div class="halved-content">
+                    <%- include('upper-wrapper.ejs') %>
+                </div>
+                <%- include('lower-wrapper.ejs') %>
+            </div>
+        </section>
+        <%- include('static/footer.ejs') %>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+</html>

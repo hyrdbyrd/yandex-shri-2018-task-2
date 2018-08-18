@@ -1,0 +1,39 @@
+[
+    {
+        "name": "Xiaomi Yeelight LED Smart Bulb",
+        "type": "light",
+        "isActive": true,
+        "task": "scroller",
+        "filter": "Зал"
+    },
+    {
+        "name": "Phillips Cooler",
+        "type": "temperature",
+        "isActive": false,
+        "task": "scroller",
+        "filter": "Кухня"
+    },
+    {
+        "name": "D-Link Omna 180 Cam",
+        "state": "Включиться в 17:00",
+        "type": "light",
+        "task": "scroller",
+        "isActive": false,
+        "filter": "Лампочки"
+    },
+    {
+        "name": "Smart Floor 3000",
+        "state": "Начнет охлаждаться в 20:45",
+        "type": "temperature",
+        "task": "roller",
+        "isActive": false,
+        "filter": "Зал"
+    },
+    {
+        "name": "Smart cam",
+        "type": "time",
+        "isActive": true,
+        "task": "scroller",
+        "filter": "Камеры"
+    }
+]

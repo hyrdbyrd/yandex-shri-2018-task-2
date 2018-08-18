@@ -1,0 +1,24 @@
+<% if (states.length) { %>
+    <div class="arrows"></div>
+    <nav class="navigation navigation_main">
+        <ul class="navigation-list navigation-list_main">
+            <% states.forEach(function (e) { %>
+                <li class="navigation-list__item device-info device-info_state">
+                    <div class="device-info-intro">
+                        <% if (e.type) { %>
+                            <img class="device-info-intro__type" src="./images/i_<%= e.type %>_<%= e.isActive ? 'a' : 'da' %>ctive.svg">
+                        <% } %>
+                        <div class="device-info-intro-data">
+                            <div class="device-info-intro__name">
+                                <%= e.name %>
+                            </div>
+                            <div class="device-info-intro__state">
+                                <%= e.state %>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            <% }) %>
+        </ul>
+    </nav>
+<% } %>
