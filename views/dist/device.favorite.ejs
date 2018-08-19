@@ -2,21 +2,45 @@
     <nav class="navigation navigation_favorite">
         <ul class="navigation-list navigation-list_favorites scroll_horizontal scroll">
             <% favorites.forEach(function (e) { %>
-                <li class="navigation-list__item device-info device-info_favorites popups" data-value="<%= e.filter %>">
-                    <div class="device-info-intro">
-                        <% if (e.type) { %>
-                            <img class="device-info-intro__type" src="./images/i_<%= e.type %>_<%= e.isActive ? 'a' : 'da' %>ctive.svg">
-                        <% } %>
-                        <div class="device-info-intro-data">
-                            <div class="device-info-intro__name">
-                                <%= e.name %>
-                            </div>
-                            <div class="device-info-intro__state">
-                                <%= e.state %>
-                            </div>
+                    <% const bool = e.type !== 'time';
+                    if (bool) { %>
+                        <div class="popup">
+                            <div class="popup-wrapper">
+                    <% } %>
+                                <li class="navigation-list__item device-info device-info_favorite<%= bool ? ' popup_item' : '' %>" data-value="<%= e.filter %>">
+                                    <div class="device-info-intro">
+                                        <% if (e.type) { %>
+                                            <img class="device-info-intro__type" src="./images/i_<%= e.type %>_<%= e.isActive ? 'a' : 'da' %>ctive.svg">
+                                        <% } %>
+                                        <div class="device-info-intro-data">
+                                            <div class="device-info-intro__name">
+                                                <%= e.name %>
+                                            </div>
+                                            <div class="device-info-intro__state">
+                                                <%= e.state %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <% if (bool) { %>
+                                        <div class="navigation navigation_<%= e.task %>">
+                                            <%- include(`navigations/${e.task}-${e.type}.ejs`) %>
+                                        </div>
+                                    <% } %>
+                                </li>
+                                <% if (bool) { %>
+                                    <div class="options options_close hidden no-visible">
+                                        <div class="options__close options__close_close">
+                                            Закрыть
+                                        </div>
+                                        <div class="options__close options__close_apply">
+                                            Применить
+                                        </div>
+                                    </div>
+                                <% } %>
+                <% if (bool) { %>
                         </div>
                     </div>
-                </li>
+                <% } %>
             <% }) %>
         </ul>
     </nav>

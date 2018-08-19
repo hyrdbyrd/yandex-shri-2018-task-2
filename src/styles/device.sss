@@ -22,14 +22,15 @@
         background: $color-white
 
 .device-info
-    box-sizing: border-box
     cursor: pointer
     width: $device-width
-    min-width: $device-width
     height: $device-height
+    min-width: $device-width
+    min-height: $device-height
     background: $color-lightGray
     padding: $device-padding
     border-radius: $device-borderRadius
+    box-sizing: border-box
     margin: 0 $device-margin $device-margin 0
     transition: $animate
     &:hover
@@ -44,6 +45,9 @@
 
 .device-info_script
     height: 100px
+
+.device-info_favorite
+    margin-bottom: 0
 
 .device-info-intro
     height: 100%
