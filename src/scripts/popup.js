@@ -1,146 +1,146 @@
-(function(){
-    window.addEventListener('load', e => {
-        const _ = document;
-        const div = _.createElement('div');
-        const body = document.body;
+// (function(){
+//     window.addEventListener('load', e => {
+//         const _ = document;
+//         const div = _.createElement('div');
+//         const body = document.body;
 
-        const popupsElems = body.querySelectorAll('.popups');
-        const shade = body.querySelector('.shade');
-        let state = true;
+//         const popupsElems = body.querySelectorAll('.popups');
+//         const shade = body.querySelector('.shade');
+//         let state = true;
 
-        function handler (event) {
-            const element = this;
+//         function handler (event) {
+//             const element = this;
 
-            const wrappet = div.cloneNode(false);
-            const wrappetOptions = div.cloneNode(false);
+//             const wrappet = div.cloneNode(false);
+//             const wrappetOptions = div.cloneNode(false);
 
-            const closeOpt = div.cloneNode(false);
-            closeOpt.classList.add('options_close');
-            closeOpt.classList.add('hidden');
+//             const closeOpt = div.cloneNode(false);
+//             closeOpt.classList.add('options_close');
+//             closeOpt.classList.add('hidden');
 
-            const close = closeOpt.cloneNode(true);
-            const apply = closeOpt.cloneNode(true);
+//             const close = closeOpt.cloneNode(true);
+//             const apply = closeOpt.cloneNode(true);
 
-            if (state) {
-                wrappet.classList.add('wrappet');
-                wrappetOptions.classList.add('wrappet-options');
+//             if (state) {
+//                 wrappet.classList.add('wrappet');
+//                 wrappetOptions.classList.add('wrappet-options');
 
-                function fullToggle (event) {
-                    toggle();
-                    removeWrappet();
-                }
+//                 function fullToggle (event) {
+//                     toggle();
+//                     removeWrappet();
+//                 }
 
-                close.classList.add('options__close');
-                close.addEventListener('click', fullToggle);
+//                 close.classList.add('options__close');
+//                 close.addEventListener('click', fullToggle);
 
-                apply.classList.add('options__apply');
-                apply.addEventListener('click', fullToggle);
+//                 apply.classList.add('options__apply');
+//                 apply.addEventListener('click', fullToggle);
 
-                let paste = element.previousElementSibling;
-                let flag = 'afterEnd';
-                const parent = element.parentElement;
+//                 let paste = element.previousElementSibling;
+//                 let flag = 'afterEnd';
+//                 const parent = element.parentElement;
 
-                if (!paste) {
-                    flag = 'beforeBegin'
-                    paste = element.nextElementSibling;
-                }
+//                 if (!paste) {
+//                     flag = 'beforeBegin'
+//                     paste = element.nextElementSibling;
+//                 }
 
-                wrappetOptions.appendChild(close);
-                wrappetOptions.appendChild(apply);
+//                 wrappetOptions.appendChild(close);
+//                 wrappetOptions.appendChild(apply);
 
-                wrappet.appendChild(element);
-                wrappet.appendChild(wrappetOptions);
+//                 wrappet.appendChild(element);
+//                 wrappet.appendChild(wrappetOptions);
 
-                regulator();
+//                 regulator();
 
-                if (paste) {
-                    paste.insertAdjacentElement(flag, wrappet);
-                } else {
-                    parent.appendChild(wrappet);
-                }
+//                 if (paste) {
+//                     paste.insertAdjacentElement(flag, wrappet);
+//                 } else {
+//                     parent.appendChild(wrappet);
+//                 }
 
-            }
+//             }
 
-            function regulator() {
-                const classes = element.classList;
-                if (classes.contains('device-info_temperature_active')) {
-                    const intro = element.querySelector('.device-intro-info');
+//             function regulator() {
+//                 const classes = element.classList;
+//                 if (classes.contains('device-info_temperature_active')) {
+//                     const intro = element.querySelector('.device-intro-info');
                     
-                    const t = div.cloneNode(false);
-                    t.textContent = element.getAttribute('temperature');
-                    t.classList.add('temperature-info');
+//                     const t = div.cloneNode(false);
+//                     t.textContent = element.getAttribute('temperature');
+//                     t.classList.add('temperature-info');
                     
-                    intro.insertAdjacentElement('beforeBegin', t);
-                }
-            }
+//                     intro.insertAdjacentElement('beforeBegin', t);
+//                 }
+//             }
 
-            toggle();
+//             toggle();
 
-            function removeWrappet() {
-                setTimeout(() => {
-                    wrappet.removeChild(wrappetOptions);
-                    let paste = wrappet.previousElementSibling;
-                    let flag = 'afterEnd';
-                    const parent = wrappet.parentElement;
-                    if (!paste) {
-                        flag = 'beforeBegin';
-                        paste = wrappet.nextElementSibling;
-                    }
+//             function removeWrappet() {
+//                 setTimeout(() => {
+//                     wrappet.removeChild(wrappetOptions);
+//                     let paste = wrappet.previousElementSibling;
+//                     let flag = 'afterEnd';
+//                     const parent = wrappet.parentElement;
+//                     if (!paste) {
+//                         flag = 'beforeBegin';
+//                         paste = wrappet.nextElementSibling;
+//                     }
 
-                    if (paste) {
-                        paste.insertAdjacentElement(flag, element);
-                    } else {
-                        parent.appendChild(element);
-                    }
+//                     if (paste) {
+//                         paste.insertAdjacentElement(flag, element);
+//                     } else {
+//                         parent.appendChild(element);
+//                     }
 
-                    parent.removeChild(wrappet);
+//                     parent.removeChild(wrappet);
 
-                    const intro = element.querySelector('.device-intro');
-                    const t = intro.querySelector('.temperature-info');
-                    if (t)
-                        intro.removeChild(t);
-                }, 200)
-            }
+//                     const intro = element.querySelector('.device-intro');
+//                     const t = intro.querySelector('.temperature-info');
+//                     if (t)
+//                         intro.removeChild(t);
+//                 }, 200)
+//             }
 
-            function toggle() {
-                element.classList.toggle('popup_active');
-                if (state) {
-                    element.removeEventListener('click', handler);
-                } else {
-                    element.addEventListener('click', handler);
-                }
+//             function toggle() {
+//                 element.classList.toggle('popup_active');
+//                 if (state) {
+//                     element.removeEventListener('click', handler);
+//                 } else {
+//                     element.addEventListener('click', handler);
+//                 }
                 
-                fullRebase();
-                state = !state;
-            }
+//                 fullRebase();
+//                 state = !state;
+//             }
 
-            function rebase(element, start, end, ms=0, hasStart=true, hasEnd=true) {
-                const s = [start, end];
-                if (!state) [s[0], s[1]] = [s[1], s[0]];
+//             function rebase(element, start, end, ms=0, hasStart=true, hasEnd=true) {
+//                 const s = [start, end];
+//                 if (!state) [s[0], s[1]] = [s[1], s[0]];
 
-                if (hasStart) {
-                    element.classList.toggle(s[0]);
-                }
-                if (hasEnd) {
-                    setTimeout(() => {
-                        element.classList.toggle(s[1])
-                    }, ms);
-                }
-            }
+//                 if (hasStart) {
+//                     element.classList.toggle(s[0]);
+//                 }
+//                 if (hasEnd) {
+//                     setTimeout(() => {
+//                         element.classList.toggle(s[1])
+//                     }, ms);
+//                 }
+//             }
 
-            function fullRebase () {
-                rebase(shade, 'shade_hidden', 'shade_active', state ? 0 : 200);
-                rebase(close, 'hidden', 'options_close_active', 200);
-                rebase(apply, 'hidden', 'options_close_active', 200);
-                rebase(element, 'popup_active', 'popup');
-                if (state) {
-                    rebase(wrappet, 'wrappet', 'wrappet_active', 0, false);
-                }
-            }
-        }
+//             function fullRebase () {
+//                 rebase(shade, 'shade_hidden', 'shade_active', state ? 0 : 200);
+//                 rebase(close, 'hidden', 'options_close_active', 200);
+//                 rebase(apply, 'hidden', 'options_close_active', 200);
+//                 rebase(element, 'popup_active', 'popup');
+//                 if (state) {
+//                     rebase(wrappet, 'wrappet', 'wrappet_active', 0, false);
+//                 }
+//             }
+//         }
         
-        popupsElems.forEach((popup, i, link) => {
-            popup.addEventListener('click', handler);
-        })
-    });
-})()
+//         popupsElems.forEach((popup, i, link) => {
+//             popup.addEventListener('click', handler);
+//         })
+//     });
+// })()
