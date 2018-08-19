@@ -7,14 +7,25 @@
             const arrowLeft = arrows.querySelector('.slide-arrows__arrow_left');
             const arrowRight = arrows.querySelector('.slide-arrows__arrow_right');
 
-            const list = section.querySelector('.navigation');
+            const scrollElem = section.querySelector('.scroll');
+            let dimension;
+
+            if (scrollElem.classList.contains('scroll_horizontal')) {
+                dimension = 'width';
+            } else if (scrollElem.classList.contains('scroll_vertical')) {
+                dimension = 'height';
+            } else {
+                const classNameErr = new Error('ClassNameError: Item hasn\'t type!');
+                console.error(`The "${classNameErr}" error, on ${scrollElem} item!`);
+                throw classNameErr;
+            }
 
             const rHandler = function (event) {
-                scroll(list, 1);
+                scroll(scrollElem, 1, dimension);
             }
 
             const lHandler = function (event) {
-                scroll(list, -1);
+                scroll(scrollElem, -1, dimension);
             }
 
             function scroll (element, dir, side='height') {
@@ -27,10 +38,10 @@
                         clearInterval(scrolling);
                         if (dir < 0) {
                             setTimeout(function () {
-                                check(element);
+                                check(element, dimension);
                             }, 0)
                         } else {
-                            check(element);
+                            check(element, dimension);
                         }
                     }
                     element.scrollBy(!bool && diff * dir, bool && diff * dir);
@@ -40,11 +51,11 @@
 
             function check (element, side='height') {
                 const bool = side === 'height' ? true : false;
-                const metrika = side[0].toUpperCase() + side.slice(1);
+                side = side[0].toUpperCase() + side.slice(1);
                 
-                const scroll = element[`scroll${metrika}`];
-                const offset = element[`offset${metrika}`];
-                const scrollBy = element[`scroll${bool ? 'Top' : 'Left'}`];
+                const scroll = element[`scroll${side}`];
+                const offset = element[`offset${side}`];
+                const scrollBy = element[`scroll${ bool ? 'Top' : 'Left' }`];
                 
                 const activeClass = 'slide-arrows__arrow_active';
 
@@ -66,7 +77,7 @@
                 }
             }
 
-            check(list);
+            check(scrollElem, dimension);
 
         });
     });

@@ -1,6 +1,6 @@
 <% if (favorites.length) { %>
     <nav class="navigation navigation_favorite">
-        <ul class="navigation-list navigation-list_favorites">
+        <ul class="navigation-list navigation-list_favorites scroll_horizontal scroll">
             <% favorites.forEach(function (e) { %>
                 <li class="navigation-list__item device-info device-info_favorites popups" data-value="<%= e.filter %>">
                     <div class="device-info-intro">

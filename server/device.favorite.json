@@ -35,5 +35,35 @@
         "isActive": true,
         "task": "scroller",
         "filter": "Камеры"
+    },
+    {
+        "name": "Smart Floor 3000",
+        "state": "Начнет охлаждаться в 20:45",
+        "type": "temperature",
+        "task": "roller",
+        "isActive": false,
+        "filter": "Зал"
+    },
+    {
+        "name": "Smart cam",
+        "type": "time",
+        "isActive": true,
+        "task": "scroller",
+        "filter": "Камеры"
+    },
+    {
+        "name": "Smart Floor 3000",
+        "state": "Начнет охлаждаться в 20:45",
+        "type": "temperature",
+        "task": "roller",
+        "isActive": false,
+        "filter": "Зал"
+    },
+    {
+        "name": "Smart cam",
+        "type": "time",
+        "isActive": true,
+        "task": "scroller",
+        "filter": "Камеры"
     }
 ]
