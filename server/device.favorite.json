@@ -9,6 +9,7 @@
     {
         "name": "Phillips Cooler",
         "type": "temperature",
+        "value": 23,
         "isActive": false,
         "task": "scroller",
         "filter": "Кухня"
@@ -25,6 +26,7 @@
         "name": "Smart Floor 3000",
         "state": "Начнет охлаждаться в 20:45",
         "type": "temperature",
+        "value": 23,
         "task": "roller",
         "isActive": false,
         "filter": "Зал"
@@ -40,6 +42,7 @@
         "name": "Smart Floor 3000",
         "state": "Начнет охлаждаться в 20:45",
         "type": "temperature",
+        "value": 23,
         "task": "roller",
         "isActive": false,
         "filter": "Зал"
@@ -55,6 +58,7 @@
         "name": "Smart Floor 3000",
         "state": "Начнет охлаждаться в 20:45",
         "type": "temperature",
+        "value": 23,
         "task": "roller",
         "isActive": false,
         "filter": "Зал"

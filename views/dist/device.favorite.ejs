@@ -10,7 +10,16 @@
                                 <li class="navigation-list__item device-info device-info_favorite<%= bool ? ' popup_item' : '' %>" data-value="<%= e.filter %>">
                                     <div class="device-info-intro">
                                         <% if (e.type) { %>
-                                            <img class="device-info-intro__type" src="./images/i_<%= e.type %>_<%= e.isActive ? 'a' : 'da' %>ctive.svg">
+                                            <% if (e.value) { %>
+                                                <div class="device-info_value">
+                                                    <div class="device-info__value">
+                                                        <%= (e.value > 0 ? '+' : '-') + e.value %>
+                                                    </div>
+                                            <% } %>
+                                                    <img class="device-info-intro__type" src="./images/i_<%= e.type %>_<%= e.isActive ? 'a' : 'da' %>ctive.svg">
+                                            <% if (e.value) { %>
+                                                </div>
+                                            <% } %>
                                         <% } %>
                                         <div class="device-info-intro-data">
                                             <div class="device-info-intro__name">
@@ -22,8 +31,8 @@
                                         </div>
                                     </div>
                                     <% if (bool) { %>
-                                        <div class="navigation navigation_<%= e.task %>">
-                                            <%- include(`navigations/${e.task}-${e.type}.ejs`) %>
+                                        <div class="navigation navigation-task-wrapper navigation_<%= e.task %> hidden no-visible">
+                                            <%- include(`navigations/${e.task}-${e.type}.ejs`, { e }) %>
                                         </div>
                                     <% } %>
                                 </li>

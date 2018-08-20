@@ -6,6 +6,8 @@
     height: 100%
 
 .popup_item_active
+    cursor: default
+    background: $color-white
     padding: 20px
     width: 100%
     margin-bottom: 20px
@@ -20,7 +22,10 @@
         font-size: 27px
     .device-info-intro__state
         font-size: 14px
-
+    &:hover
+        box-shadow: none
+    .device-info__value
+        display: block
 
 .popup-wrapper
     transition: $animate
@@ -37,6 +42,3 @@
 .popup-wrapper_replaced
     left: 27%
     transition: none
-
-.popup_active
-    

@@ -66,11 +66,14 @@
             const close = options.querySelector('.options__close_close');
             const apply = options.querySelector('.options__close_apply');
 
+            const navigation = popup.querySelector('.navigation');
 
             function toggle(event) {
                 switchState(state, shade, 'hidden', 'no-visible', state ? 0 : 200);
                 switchState(state, options, 'hidden', 'no-visible', state ? 0 : 200);
-                popupItem.classList.toggle('popup_item_active')
+                switchState(state, navigation, 'hidden', 'no-visible', 0);
+
+                popupItem.classList.toggle('popup_item_active');
 
                 if (state) {
                     wrapper.classList.toggle('popup-wrapper_active');
