@@ -4,10 +4,10 @@
             <% favorites.forEach(function (e) { %>
                     <% const bool = e.type !== 'time';
                     if (bool) { %>
-                        <div class="popup">
+                        <div class="popup" <%= bool ? `data-filter=${e.filter}` : '' %>>
                             <div class="popup-wrapper">
                     <% } %>
-                                <li class="navigation-list__item device-info device-info_favorite<%= bool ? ' popup_item' : '' %>" data-value="<%= e.filter %>">
+                                <li class="navigation-list__item device-info device-info_favorite<%= bool ? ' popup__item' : '' %>" <%= !bool ? `data-filter=${e.filter}` : '' %>>
                                     <div class="device-info-intro">
                                         <% if (e.type) { %>
                                             <% if (e.value) { %>
@@ -31,13 +31,13 @@
                                         </div>
                                     </div>
                                     <% if (bool) { %>
-                                        <div class="navigation navigation-task-wrapper navigation_<%= e.task %> hidden no-visible">
+                                        <div class="navigation navigation-task-wrapper navigation_<%= e.task %> transparent">
                                             <%- include(`navigations/${e.task}-${e.type}.ejs`, { e }) %>
                                         </div>
                                     <% } %>
                                 </li>
                                 <% if (bool) { %>
-                                    <div class="options options_close hidden no-visible">
+                                    <div class="options options_close transparent">
                                         <div class="options__close options__close_close">
                                             Закрыть
                                         </div>

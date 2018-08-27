@@ -1,6 +1,6 @@
-@import 'index.sss'
-
 .header
+    width: 100%
+    background: $color-white
     &::after
         content: ''
         display: block
@@ -17,3 +17,14 @@
 
 .header-menu__item
     margin-left: 30px
+
+@media (max-width: 679px)
+    .header
+        position: fixed
+        &::after
+            display: none
+    .header-container
+        padding: 12px 0
+        justify-content: space-between
+    .navigation_header
+        display: none

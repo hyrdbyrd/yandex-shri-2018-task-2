@@ -1,3 +1,9 @@
 import 'babel-polyfill';
-import './styles/style.sss';
-import './scripts/index.js';
+import './state-scroll';
+import './smooth-scroll';
+import './popup/';
+import './scroller/';
+import './roller/';
+import './options/';
+import './burger/';
+import './style.sss';

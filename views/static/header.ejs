@@ -2,22 +2,13 @@
     <div class="header-container container">
         <img src="images/logo.svg" class="header-container__logo"></img>
         <nav class="navigation navigation_header">
-            <ul class="navigation-list navigation-list_header">
-                <a href="#" class="link link_active header_link">
-                    <li class="navigation-list__item header-menu__item">
-                        Сводка
-                    </li>
-                </a>
-                <a href="#" class="link header_link">
-                    <li class="navigation-list__item header-menu__item">
-                        Устройства
-                    </li>
-                </a>
-                <a href="#" class="link header_link">
-                    <li class="navigation-list__item header-menu__item">
-                        Сценарии
-                    </li>
-                </a>
+            <%- include('header-menu.ejs') %>
+        </nav>
+        <img src="images/i_list.svg" class="burger">
+        <nav class="navigation navigation_header_phone_screen">
+            <ul class="navigation-list navigation-list_header_phone_screen">
+                <%- include('header-menu.ejs') %>
+                <%- include('footer-menu.ejs') %>
             </ul>
         </nav>
     </div>

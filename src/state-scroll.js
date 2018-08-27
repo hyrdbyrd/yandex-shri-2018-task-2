@@ -1,12 +1,12 @@
 (function(){
     window.addEventListener('load', e => {
-        const rightBoard = document.body.querySelector('.board-part_right');
+        const rightBoard = document.body.querySelector('.board__right');
 
         function check (event) {
             if (rightBoard.offsetHeight + rightBoard.scrollTop >= rightBoard.scrollHeight) {
-                arrows.classList.add('no-visible')
-            } else if (arrows.classList.contains('no-visible')) {
-                arrows.classList.remove('no-visible')
+                arrows.classList.add('transparent')
+            } else if (arrows.classList.contains('transparent')) {
+                arrows.classList.remove('transparent')
             }
         }
 

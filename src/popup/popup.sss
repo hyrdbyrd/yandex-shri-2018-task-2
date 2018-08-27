@@ -1,0 +1,58 @@
+.popup-wrapper
+    display: flex
+    flex-direction: column
+    overflow: hidden
+    transition: $animate
+    z-index: 10000
+    max-height: $device-height
+    height: 100%
+
+.popup-wrapper_active
+    overflow: visible
+    height: fit-content
+    position: fixed
+    margin-right: 0
+    width: 50%
+    max-height: none
+    box-sizing: border-box
+    .navigation-task-wrapper
+        display: flex
+
+.popup__item
+    transition: $animate
+    box-sizing: border-box
+
+.popup__item_active
+    display: flex
+    flex-direction: column
+    cursor: default
+    background: $color-white
+    padding: 20px
+    width: 100%
+    height: fit-content
+    flex-grow: 1
+    box-sizing: border-box
+    margin-bottom: 20px
+    .device-info-intro
+        height: auto
+        flex-direction: row-reverse
+    .device-info-intro__type
+        $s: 48px
+        width: $s
+        height: $s
+    .device-info-intro__name
+        font-size: 27px
+    .device-info-intro__state
+        font-size: 14px
+    &:hover
+        box-shadow: none
+    .device-info__value
+        display: block
+
+@media (max-width: 979px)
+    .popup-wrapper_active
+        width: 90%
+
+@media (max-width: 579px)
+    .popup-wrapper_active
+        height: 94%

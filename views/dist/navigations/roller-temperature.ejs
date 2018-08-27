@@ -1,7 +1,12 @@
-<div class="roller-temperature popup-navigation hidden hidden" value="<%= e.value %>">
-    <div class="roller-temperature-wrapper">
-        <div class="roller-temperature-wrapper__value">
-            <%= e.value %>
+<div class="roller-temperature popup-navigation_roller popup-navigation" value="<%= e.value %>">
+    <div class="oval-wrapper">
+        <div class="roller-temperature__arrow">
+            <img class="roller__arrow" src="images/i_arrow_oval.svg">
+        </div>
+        <div class="roller-temperature-wrapper">
+            <div class="roller-temperature-wrapper__value">
+                <%= (e.value > 0 ? '+' : '-') + e.value %>
+            </div>
         </div>
     </div>
 </div>

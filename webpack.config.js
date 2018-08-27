@@ -1,7 +1,7 @@
 const path = require('path');
 const devMode = process.env.NODE_ENV !== 'production';
 const DIST_PATH = path.join(__dirname, 'public').replace(/\\/g, '/');
-const { backend } = require('./server/server.js');
+const { backend } = require('./server/');
 
 module.exports = {
   mode: devMode ? 'development' : 'production',
