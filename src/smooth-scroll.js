@@ -1,5 +1,5 @@
 (function(){
-    window.addEventListener('load', e => {
+    window.addEventListener('load', () => {
         const optionsList = document.body.querySelectorAll('.content-section_arrows');
         optionsList.forEach(section => {
             const arrows = section.querySelector('.slide-arrows');
@@ -20,16 +20,16 @@
                 throw classNameErr;
             }
 
-            const rHandler = function (event) {
+            const rHandler = function () {
                 scroll(scrollElem, 1, dimension);
-            }
+            };
 
-            const lHandler = function (event) {
+            const lHandler = function () {
                 scroll(scrollElem, -1, dimension);
-            }
+            };
 
             function scroll (element, dir, side='height') {
-                const bool = side === 'height' ? true : false
+                const bool = side === 'height' ? true : false;
                 const end = (bool ? 100 : 200) + 15; // height/width + margin (15)
                 const diff = 5;
                 let summ = 0;
@@ -39,14 +39,14 @@
                         if (dir < 0) {
                             setTimeout(function () {
                                 check(element, dimension);
-                            }, 0)
+                            }, 0);
                         } else {
                             check(element, dimension);
                         }
                     }
                     element.scrollBy(!bool && diff * dir, bool && diff * dir);
                     summ += diff;
-                }, 0)
+                }, 0);
             }
 
             function check (element, side='height') {
@@ -81,4 +81,4 @@
 
         });
     });
-})()
+})();

@@ -8,7 +8,7 @@ export default class Scroller {
                 return this.element.offsetWidth > this.element.offsetHeight ? 'X' : 'Y';
             },
             get dimension() {
-                return this.element.offsetWidth > this.element.offsetHeight ? 'Width' : 'Height'
+                return this.element.offsetWidth > this.element.offsetHeight ? 'Width' : 'Height';
             },
             get ident () {
                 return this.element.offsetWidth > this.element.offsetHeight ? 'left' : 'top';
@@ -30,7 +30,7 @@ export default class Scroller {
             move: { handleEvent: this.onMove, self: this },
             end: { handleEvent: this.onDragEnd, self: this },
             resize: { handleEvent: this.onResize, self: this }
-        }
+        };
 
         this.init;
     }
@@ -41,6 +41,8 @@ export default class Scroller {
         this.scroller.element.addEventListener('mousedown', start);
         this.scroller.element.addEventListener('touchstart', start);
         window.addEventListener('resize', resize);
+        
+        return null;
     }
     // window.onresize
     onResize() {
@@ -115,5 +117,7 @@ export default class Scroller {
         document.removeEventListener('mouseup', end);
         document.removeEventListener('touchmove', move);
         document.removeEventListener('touchend', end);
+
+        return null;
     }
 }

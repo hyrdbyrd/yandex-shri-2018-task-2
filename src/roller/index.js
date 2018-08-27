@@ -1,7 +1,7 @@
-import Roller from './roller'
+import Roller from './roller';
 
 (function () {
-    window.addEventListener('load', e => {
+    window.addEventListener('load', () => {
         const rollers = document.body.querySelectorAll('.roller-temperature');
 
         rollers.forEach(roller => {
@@ -9,4 +9,4 @@ import Roller from './roller'
             new Roller (roller, arrow);
         });
     });
-})()
+})();

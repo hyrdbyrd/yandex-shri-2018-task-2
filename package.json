@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --inline --open"
+    "start": "webpack-dev-server --hot --inline --open",
+    "lint": "eslint src"
   },
   "author": "ilya777grin23",
   "license": "ISC",

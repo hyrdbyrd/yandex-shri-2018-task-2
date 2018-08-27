@@ -24,6 +24,7 @@ export default class Popup {
         });
 
         window.addEventListener('resize', resize);
+        return null;
     }
     resize () {
         const { self } = this;
@@ -52,6 +53,7 @@ export default class Popup {
         this.popup.transparent.forEach(item => {
             item.classList.toggle('transparent');
         });
+        return null;
     }
     get toCenter () {
         const { state } = this.popup;
@@ -59,14 +61,14 @@ export default class Popup {
         if (!state) {
             this.popup.wrapper.style.marginTop = 0;
             this.popup.wrapper.style.marginLeft = 0;
-            return;
+            return null;
         }
         
         // w - window metrika
         const w = {
             h: window.innerHeight, // height
             w: window.innerWidth // width
-        }
+        };
 
         w.x = w.w / 2; // coord X
         w.y = w.h / 2; // coord Y
@@ -77,12 +79,18 @@ export default class Popup {
             m.x += m.width / 2;
             m.y += m.height / 2;
 
+            let diff = 30;
+            if (w.w <= 600) {
+                diff = 0;
+            }
+
             // Get margin as pixels
-            let marginTop = w.y - m.y;
+            let marginTop = w.y - m.y - diff;
             let marginLeft = w.x - m.x;
 
             this.popup.wrapper.style.marginTop = `${marginTop}px`;
             this.popup.wrapper.style.marginLeft = `${marginLeft}px`;
         }, 200);
+        return null;
     }
 }

@@ -1,10 +1,10 @@
-import Popup from './popup.js'
+import Popup from './popup.js';
 (function () {
-    window.addEventListener('load', e => {
+    window.addEventListener('load', () => {
         const shade = document.body.querySelector('.shade');
         const popups = document.body.querySelectorAll('.popup');
         popups.forEach(popup => {
-            const wrapper = popup.querySelector('.popup-wrapper')
+            const wrapper = popup.querySelector('.popup-wrapper');
             const popupItem = popup.querySelector('.popup__item');
             
             const options = popup.querySelector('.options');
@@ -17,4 +17,4 @@ import Popup from './popup.js'
             new Popup(popupItem, wrapper, [close, apply], [navigation, options, shade]);
         });
     });
-})()
+})();

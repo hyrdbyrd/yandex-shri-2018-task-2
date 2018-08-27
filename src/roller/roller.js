@@ -14,7 +14,7 @@ export default class Roller {
             start: { handleEvent: this.onDrag, self: this },
             move: { handleEvent: this.onMove, self: this },
             end: { handleEvent: this.onDragEnd, self: this },
-        }
+        };
 
         this.init;
     }
@@ -24,6 +24,8 @@ export default class Roller {
 
         this.roller.element.addEventListener('mousedown', start);
         this.roller.element.addEventListener('touchstart', start);
+    
+        return null;
     }
     // mousedown || touchstart
     onDrag(event) {
@@ -79,5 +81,7 @@ export default class Roller {
         document.removeEventListener('mouseup', end);
         document.removeEventListener('touchmove', move);
         document.removeEventListener('touchend', end);
+    
+        return null;
     }
 }

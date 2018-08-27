@@ -48,12 +48,12 @@
     flex-grow: 1
 
 .options__close_close
-    margin-right: 30px
     background: $color-white
     &:hover 
         background: $color-white
 
 .options__close_apply
+    margin-right: 30px
     background: $color-yellow
     &:hover 
         background: $color-lightYellow
@@ -63,6 +63,23 @@
     &::-webkit-scrollbar
         width: 0
         height: 0
+
+    
+.filter__option
+    cursor: pointer
+    transition: $animate
+    margin-left: 10px
+    border-radius: 20px
+    padding: 6px 12px
+    background: $color-lightGray
+    &:hover
+        box-shadow: 0 2px 6px 0 $color-shadow
+        background: $color-white
+
+.filter__option_active
+    background: $color-yellow
+    &:hover
+        background: $color-lightYellow
 
 @media (max-width: 979px)
     .slide-arrows
@@ -109,3 +126,12 @@
                 width: $s
                 height: $s
                 background-size: 100% 100%
+
+@media (max-width: 579px)
+    .options__close
+        margin: 0
+        width: 100%
+    .options__close_close
+        margin-top: 15px
+    .options_close
+        flex-direction: column

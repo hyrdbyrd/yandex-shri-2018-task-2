@@ -4,7 +4,7 @@ export default class Filter {
             navigationElement: filterNav,
             list: [...filterList.map(e => ({
                 element: e,
-                value: e.innerHTML.replace(/[\n\ ]/gi, '')
+                value: e.innerHTML.replace(/[\n ]/gi, '')
             }))],
             filterActiveClass: 'filter__option_active',
             navigationActiveClass: 'navigation-list_filter_active'
@@ -14,8 +14,6 @@ export default class Filter {
             value: e.getAttribute('data-filter')
         }))];
 
-        this.resize = { handleEvent: this.onResize, self: this };
-        
         this.init;
     }
     get init () {
@@ -31,13 +29,11 @@ export default class Filter {
             option.element.addEventListener('click', eventsList[index]);
         });
 
-        window.addEventListener('resize', this.resize);
+        return null;
     }
     onClick () {
         const { self, value, element } = this;
         const { filterActiveClass: activeClass } = self.filter;
-
-        console.log(element);
 
         const isActive = element.classList.contains(activeClass);
         if (isActive) {
@@ -54,9 +50,6 @@ export default class Filter {
         const { navigationElement: navigation, navigationActiveClass: activeClass } = this.filter;
         navigation.classList.toggle(activeClass);
     }
-    onResize () {
-        this.self.switchNavState;
-    }
     toggleFilter (value) {
         const { devices } = this;
         if (value === 'Все') {
@@ -70,5 +63,7 @@ export default class Filter {
                 device.element.style.display = 'none';
             }
         });
+    
+        return null;
     }
 }
