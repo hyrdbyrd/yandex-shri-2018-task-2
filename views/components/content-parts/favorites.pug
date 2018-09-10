@@ -1,0 +1,7 @@
+.content-section.content-section_favorites.content-section_arrows.content-section_arrows
+    .content-options
+        .content-section__title Избранные устройства
+        .filter-wrapper
+            +filterList(['Все', 'Кухня',  'Зал', 'Лампочки', 'Камеры'])(class='filter filter_favorites')
+        +arrows
+    +infoList('favorites')(class='scroll scroll_horizontal')

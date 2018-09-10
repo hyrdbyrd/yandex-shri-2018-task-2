@@ -20,14 +20,16 @@ npm start
 2. postcss-import
 3. autoprefixer
 4. precss
+5. assets
+6. preset-env
 ### Node.js
 Для сервера и сборки
 #### Список используемого
-1. ejs
+1. pug
 2. webpack
 3. webpack-dev-server
 ## Компоненты, которые можно было отделить
-### Scroller, Roller, Filter
+### Roller, Filter
 Все эти компоненты, написаны на js, спецификации 2016 года.
 ### *.sss
 Постарался выделить блоки, в отдельные сущности, и вся стилизация была выделена в отельные файлы.

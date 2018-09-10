@@ -1,0 +1,181 @@
+{
+    "favorites": [
+        {
+            "name": "Xiaomi Yeelight LED Smart Bulb",
+            "type": "light",
+            "isActive": true,
+            "task": "scroller",
+            "filter": "Зал",
+            "popups": true
+        },
+        {
+            "name": "Phillips Cooler",
+            "type": "temperature",
+            "value": 23,
+            "isActive": false,
+            "task": "scroller",
+            "filter": "Кухня",
+            "popups": true
+        },
+        {
+            "name": "D-Link Omna 180 Cam",
+            "state": "Включиться в 17:00",
+            "type": "light",
+            "task": "scroller",
+            "isActive": false,
+            "filter": "Лампочки",
+            "popups": true
+        },
+        {
+            "name": "Smart Floor 3000",
+            "state": "Начнет охлаждаться в 20:45",
+            "type": "temperature",
+            "value": 23,
+            "task": "roller",
+            "isActive": false,
+            "filter": "Зал",
+            "popups": true
+        },
+        {
+            "name": "Smart cam",
+            "type": "time",
+            "isActive": true,
+            "task": "scroller",
+            "filter": "Камеры"
+        },
+        {
+            "name": "Smart Floor 3000",
+            "state": "Начнет охлаждаться в 20:45",
+            "type": "temperature",
+            "value": 23,
+            "task": "roller",
+            "isActive": false,
+            "filter": "Зал",
+            "popups": true
+        },
+        {
+            "name": "Smart cam",
+            "type": "time",
+            "isActive": true,
+            "task": "scroller",
+            "filter": "Камеры"
+        },
+        {
+            "name": "Smart Floor 3000",
+            "state": "Начнет охлаждаться в 20:45",
+            "type": "temperature",
+            "value": 23,
+            "task": "roller",
+            "isActive": false,
+            "filter": "Зал",
+            "popups": true
+        },
+        {
+            "name": "Smart cam",
+            "type": "time",
+            "isActive": true,
+            "task": "scroller",
+            "filter": "Камеры"
+        }
+    ],
+    "scripts": [
+        {
+            "name": "Выкл. весь свет в доме и во дворе",
+            "state": "",
+            "type": "light",
+            "isActive": true
+        },
+        {
+            "name": "Я ухожу",
+            "state": "",
+            "type": "time",
+            "isActive": true
+        },
+        {
+            "name": "Вкл. свет в коридоре",
+            "state": "",
+            "type": "light",
+            "isActive": true
+        },
+        {
+            "name": "Набрать горячую ванну",
+            "state": "Начнется в 21:00",
+            "type": "temperature",
+            "isActive": true
+        },
+        {
+            "name": "Сделать пол тёплым во всей квратире",
+            "state": "",
+            "type": "temperature",
+            "isActive": true
+        },
+        {
+            "name": "Вкл. подсветку на кухне",
+            "state": "Начнется в 17:00",
+            "type": "light",
+            "isActive": true
+            }, 
+        {
+            "name": "Набрать горячую ванну",
+            "state": "Начнется в 21:00",
+            "type": "temperature",
+            "isActive": true
+            }, 
+        {
+            "name": "Сделать пол тёплым во всей квратире",
+            "state": "",
+            "type": "temperature",
+            "isActive": true
+            }, 
+        {
+            "name": "Вкл. подсветку на кухне",
+            "state": "Начнется в 17:00",
+            "type": "light",
+            "isActive": true
+        },
+        {
+            "name": "Набрать горячую ванну",
+            "state": "Начнется в 21:00",
+            "type": "temperature",
+            "isActive": true
+            }, 
+        {
+            "name": "Сделать пол тёплым во всей квратире",
+            "state": "",
+            "type": "temperature",
+            "isActive": true
+            }, 
+        {
+            "name": "Вкл. подсветку на кухне",
+            "state": "Начнется в 17:00",
+            "type": "light",
+            "isActive": true
+        }
+    ],
+    "states": [
+        {
+            "name": "Phillips Cooler",
+            "state": "Начнет охложать в 16:30",
+            "type": "temperature",
+            "isActive": false
+        },
+        {
+            "name": "Xiaomi Yeelight LED Smart Bulb",
+            "state": "Включиться в 17:00",
+            "type": "light",
+            "isActive": false
+        },
+        {
+            "name": "D-Link Omna 180 Cam",
+            "state": "Включиться в 17:00",
+            "type": "light",
+            "isActive": false
+        },
+        {
+            "name": "Smart Floor 3000",
+            "state": "Начнет охлаждаться в 20:45",
+            "type": "temperature",
+            "isActive": false
+        }
+    ]
+}

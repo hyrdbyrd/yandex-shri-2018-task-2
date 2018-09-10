@@ -1,0 +1,61 @@
+.info
+    box-sizing: border-box
+    padding: 15px
+    border-radius: 20px
+    margin: 0 15px 15px 0
+    width: 195px
+    min-width: 195px
+    height: 120px
+    min-height: 120px
+    background: $color-lightGray
+    &:hover
+        cursor: pointer
+        background: $color-white
+        box-shadow: $shadow
+
+.info-header
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.info-desc
+    display: flex
+    flex-direction: row
+    align-items: center
+
+.info__value
+    display: none
+    font-size: 36px
+    margin-right: 15px
+
+.info__name
+    font-size: 14px
+
+.info__state
+    font-weight: 500
+    font-size: 12px
+    color: $color-text-gray
+
+.info_state
+    margin-right: 0
+
+.info_script
+    height: 100px
+
+.info_favorite
+    margin-bottom: 0
+
+
+@media (max-width: 1808px)
+    .info_script:nth-child(3n)
+        margin-right: 0
+
+@media (max-width: 1362px)
+    .info_script:nth-child(3n)
+        margin-right: 15px
+
+@media (max-width: $media-start-width)
+    .info
+        margin: 0
+        margin-right: 15px

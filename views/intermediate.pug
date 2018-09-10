@@ -1,0 +1,83 @@
+mixin filterList(options, afterPrefix)
+    select.filter-nav(size='2')&attributes(attributes)
+        each value, index in options
+            option.filter__option(selected=(index === 0))= value
+
+mixin dbArrows
+    .db-arrows
+        img.db-arrows__arrows(src='./images/arrow_top_double.svg')
+
+mixin arrows
+    .slide-arrows
+        img.slide-arrows__arrow.slide-arrows__arrow_left(src='./images/arrow_left.svg')
+        img.slide-arrows__arrow.slide-arrows__arrow_right(src='./images/arrow_right.svg')
+
+mixin popupNav (type, task, value)
+    nav.navigation.navigation_task(class=`navgation_${task}`)&attributes(attributes)
+        div.navigation-block(class=`${task} ${task}_${type}`)
+            - let isTypeLight = type === 'light';
+            - let min = isTypeLight ? '0' : '-10';
+            - let max = isTypeLight ? '10' : '30';
+            if task === 'scroller'
+                if isTypeLight
+                    +filterList(['Вручную', 'Холодно', 'Тепло', 'Жарко'])(class='filter_light filter_task')
+                else 
+                    +filterList(['Вручную', 'Дневной свет', 'Вечерний свет', 'Рассвет'])(class='filter_temperature filter_task')
+                .scroller-wrapper
+                    .scroller__before(class=`scroller__before_${type}`)
+                        if isTypeLight
+                            img.min(class=`min_${type}` src='images/i_light_w_min.svg')
+                            img.max(class=`max_${type}` src='images/i_light_w_max.svg')
+                        else
+                            p.min(class=`min_${type}`)= min
+                            p.max(class=`max_${type}`)= max
+                    input(type='range' min=min max=max step='0.1' value=`${value}` class=`${task}__item ${task}__item_${type}`)
+            if task === 'roller'
+                .roller-wrapper
+                    .roller__value= value > 0 ? `+${value}` : value
+                    .roller-arrow-wrapper
+                        img.roller__arrow(src='images/i_arrow_oval.svg')
+                    svg.roller-nav(width='221px' height='221px' viewBox='0 0 221 221')
+                        g(fill='none' fill-rule='evenodd')
+                            g(stroke='#fff' stroke-width='12')
+                                circle(fill='#fff' r='100' cx='110.5' cy='110.5' stroke='#818181' stroke-dasharray='0')
+                                circle.roller__filler(r='100' cx='110.5' cy='110.5' stroke='#f8c46d' stroke-dasharray='1 300%' stroke-dashoffset='-114')
+                                circle(r='100' cx='110.5' cy='110.5' stroke-dasharray='4 1')
+                                circle(r='100' cx='110.5' cy='110.5' stroke-dasharray='50% 300%')
+
+mixin infoList(infoName)
+    - let name = infoName.slice(0, infoName.length - 1);
+    nav.navigation(class=`navigation_${infoName}`)&attributes(attributes)
+        ul.navigation-list(class=`navigation-list_${name}`)
+            each element in info[infoName]
+                - let imageSrc = `./images/i_${ element.type + (element.type !== 'time' ? `_${ element.isActive ? 'a' : 'da'}ctive` : '')}.svg`; 
+                if infoName === 'favorites'
+                    .popup(data-filter=`${element.filter}`)
+                        .popup-wrapper
+                            li.navigation-list__item.info.popup__item(class=`info_${name}`)
+                                .info-header
+                                    .info-desc
+                                        if element.value
+                                            .info__value= (element.value > 0 ? '+' : '') + element.value
+                                        img.info__type(src=`${imageSrc}`)
+                                    .info-data
+                                        if element.name
+                                            .info__name= element.name
+                                        if element.state
+                                            .info__state= element.state
+                                +popupNav(element.type, element.task, element.value)
+                            .popup-options.popup-options_close.transparent
+                                .popup-options__close.popup-options__close_apply Применить
+                                .popup-options__close.popup-options__close_close Закрыть
+                else
+                    li.navigation-list__item.info(class=`info_${name}`)
+                        .info-header
+                            .info-desc
+                                if element.value
+                                    .info__value= (element.value > 0 ? '+' : '') + element.value
+                                img.info__type(src=`${imageSrc}`)
+                            .info-data
+                                if element.name
+                                    .info__name= element.name
+                                if element.state
+                                    .info__state= element.state

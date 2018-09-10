@@ -1,0 +1,88 @@
+.filter-nav
+    overflow-x: auto
+    box-sizing: border-box
+    height: 31px
+    flex-grow: 1
+    margin: 0 10px
+    appearance: none
+    background: transparent
+    display: inline-block
+    outline: none
+    border: none
+    box-shadow: none
+    color: $color-text-black
+    &:focus
+        outline-offset: none
+        outline: none
+        border: none
+        box-shadow: none
+        .filter__option
+            color: inherit
+    .filter__option:first-child
+        margin-left: 0
+
+.filter_task
+    overflow-y: hidden
+    max-height: 34px
+    margin: 20px 0 25px
+    width: 100%
+    padding-bottom: 2px
+
+.filter-wrapper
+    flex-grow: 1
+
+.filter-nav::-ms-expand
+    display: none
+
+.filter__option
+    font-weight: bold
+    box-sizing: border-box
+    border-radius: 20px
+    text-align: center
+    margin: 0 10px
+    padding: 8px 15px
+    display: inline-block
+    background: #f2f1f0
+    &:checked
+        background: $color-yellow linear-gradient(to right, $color-yellow, $color-yellow)
+    &:focus
+        color: $color-text-black
+        outline: none
+        outline-offset: none
+        border: none
+        box-shadow: none
+
+@media (max-width: $media-middle-width)
+    .filter-wrapper
+        justify-content: flex-end
+        padding-right: 12px
+        display: flex
+        &::after
+            margin: 8px 0 0 -22px
+            content: ''
+            display: block
+            position: relative
+            $s: 12px
+            width: $s
+            height: $s
+            background-image: resolve(images/arrow_down.svg)
+            background-position: 50% 50%
+            background-repeat: no-repeat
+            transition: $animate
+    .filter_favorites
+        background: $color-yellow
+        font-weight: bold
+        box-sizing: border-box
+        border-radius: 20px
+        text-align: center
+        margin: 0 10px
+        max-width: 70px
+        padding: 8px 27px 8px 15px
+        display: inline-block
+    .filter-nav
+        margin: 0
+    
+@media (max-width: $media-middle-width)
+    .filter_task
+        margin: 15px 0 
+        overflow-x: auto

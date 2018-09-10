@@ -1,0 +1,71 @@
+.board
+    background: resolve(images/bg_main_1.png)
+    padding: 25px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    background-repeat: no-repeat
+    background-size: 100% 100%
+    flex-grow: 1
+    height: 0
+
+.board__part
+    display: flex
+    flex-direction: column
+
+.board__part_left
+    font-size: 14px
+    min-width: 61.111111%
+
+.board-title__intro
+    font-size: 27px
+    margin-bottom: 6px
+
+.board-title__state
+    font-weight: 500
+
+.board-states
+    margin-top: 25px
+    display: flex
+    flex-direction: row
+
+.board-state
+    margin-right: 18px
+
+.board-state__location
+    color: $color-text-gray
+    font-weight: 500
+
+.board-state__deg
+    display: flex
+    align-items: center
+    font-size: 36px
+
+.board-state__deg_rain:after
+    display: block
+    content: ''
+    margin-left: 5px
+    $s: 26px
+    width: $s
+    height: $s
+    background: resolve(images/cloud-drizzle.svg) no-repeat
+
+@media (max-width: $media-start-width)
+    .board
+        height: auto
+        flex-direction: column
+    .board__part_right 
+        margin-top: 20px
+
+@media (max-width: $media-mobile-width)
+    .board-title__intro
+        font-size: 18px
+    .board-title__state, .board-state__location
+        font-size: 12px
+    .board-state__deg
+        font-size: 24px
+    .board-state__deg_rain:after
+        $s: 24px
+        width: $s
+        height: $s
+        background-size: 100% 100%

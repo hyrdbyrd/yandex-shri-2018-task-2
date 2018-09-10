@@ -1,0 +1,99 @@
+$light: #FFE682 2%, #FF9E00 98%
+$temperature: #068FFF 2%, #FFD800 51%, #F76B1C 100%
+
+.navigation-block
+    width: 100%
+
+.scroller-wrapper
+    width: 100%
+    flex-grow: 20
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.scroller__before
+    color: $color-white
+    position: absolute
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    height: 0
+    width: 89.5%
+    
+.scroller__before_light
+    width: 90.5%
+
+.scroller__item
+    padding: 0
+    cursor: pointer
+    appearance: none
+    border-radius: 60px
+    width: fill
+    height: 60px
+    outline: none
+    border: none
+    &::-webkit-slider-thumb
+        z-index: 1000
+        box-shadow: inset 0 0 0 3px $color-shadow
+        appearance: none
+        box-sizing: content-box
+        padding: .5px
+        $s: 60px
+        width: $s
+        height: $s
+        border-radius: 100%
+        border: 3px solid $color-white
+        outline: none
+    &::-moz-range-thumb
+        background: transparent
+        z-index: 1000
+        box-shadow: inset 0 0 0 3px $color-shadow
+        appearance: none
+        box-sizing: content-box
+        padding: .5px
+        $s: 60px
+        width: $s
+        height: $s
+        border-radius: 100%
+        border: 3px solid $color-white
+        outline: none
+    &::-moz-range-track
+        background: transparent
+    &::-ms-thumb
+        padding: 0
+        background: transparent
+        z-index: 1000
+        box-shadow: inset 0 0 0 3px $color-shadow
+        appearance: none
+        box-sizing: content-box
+        $s: 60px
+        width: $s
+        height: $s
+        border-radius: 100%
+        border: 3px solid $color-white
+    &::-ms-track
+        color: transparent
+        border: none
+        height: 0
+    &::-ms-fill-lower
+        background: transparent
+    &::-ms-fill-upper
+        background: transparent
+.scroller__item_light
+    background-image: linear-gradient(90deg, $light)
+
+.scroller__item_temperature
+    background-image: linear-gradient(90deg, $temperature)
+
+@media (max-width: $media-mobile-width)
+    .navigation-block
+        height: 100%
+    .scroller-wrapper
+        width: 50vh
+        transform: rotate(-90deg)
+    .max, .min
+        transform: rotate(90deg)
+    .navigation_task
+        height: 100%
